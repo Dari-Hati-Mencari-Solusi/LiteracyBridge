@@ -39,18 +39,18 @@
         <div class="mt-3 sm:mx-auto sm:w-full sm:max-w-sm">
           <form class="space-y-5" action="#" method="POST">
             <div>
-              <label for="email" class="block text-sm font-medium leading-6 text-black-300">Email</label>
+              <label for="email" class="block text-sm font-normal leading-6 text-black-300">Email</label>
               <div class="mt-2">
-                <input id="email" name="email" type="email" autocomplete="new-username" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md" placeholder="example@gmail.com">
+                <input id="email" name="email" type="email" autocomplete="new-username" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md" placeholder="Contoh@gmail.com">
               </div>
             </div>
 
             <div>
               <div class="flex items-center justify-between">
-                <label for="password" class="block text-sm font-medium leading-6 text-black-300">Kata Sandi</label>
+                <label for="password" class="block text-sm font-normal leading-6 text-black-300">Kata Sandi</label>
               </div>
               <div>
-                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3" placeholder="Masukan sandi anda ">
+                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3" placeholder="Masukan sandi anda ">
               </div>
               <div class="flex justify-between py-3">
                 <div class="flex items-center mb-4">
