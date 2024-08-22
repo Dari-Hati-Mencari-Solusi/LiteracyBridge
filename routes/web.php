@@ -30,9 +30,3 @@ Route::get('/SignUp', function () {
     'tittle' => 'SignUp'
   ]);
 });
-
-Route::get('/LandingPage', function () {
-  return view('LandingPage', [
-    'tittle' => 'LandingPage'
-  ]);
-});
