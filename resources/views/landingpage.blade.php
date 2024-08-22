@@ -18,9 +18,9 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased font-poppins">
+<body class="antialiased font-poppins md:px-[160px] ">
   <nav class="bg-white border-gray-200">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-[160px] md:pf-[22px]">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:pf-[22px]">
       <!-- Logo dan Navigasi -->
       <div class="flex items-center w-full md:w-auto md:space-x-[32px] rtl:space-x-reverse">
         <a href="#" class="flex items-center">
@@ -66,6 +66,7 @@
         </ul>
       </div>
 
+      {{-- icon --}}
       <div class="flex items-center">
         <div class="border-[1.5px] p-2 rounded-full border-neutral-500 md:inline hidden">
           <!-- SVG icon -->
@@ -77,12 +78,43 @@
           </svg>
         </div>
 
-
         <!-- Tombol Masuk -->
-        <button type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4">Masuk</button>
+        <button type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4 " style="color:white !important">Masuk</button>
       </div>
     </div>
   </nav>
+
+  {{-- hero section --}}
+  <section class="py-[114px]">
+    <div class="md:flex md:justify-around justify-center items-center text-center">
+      <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/char4.webp" alt="" class="md:w-[393px] w-[300px]">
+      </div>
+      <div class="md:text-[33px] text-[28px] font-semibold space-y-5">
+        <div>
+          <h3>Baca Lebih Banyak Buku,</h3>
+          <h3>Capai Lebih Jauh Ilmu.</h3>
+        </div>
+        <div class="md:flex justify-center">
+          <button class="md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[120px] py-3 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4" style="color:white !important">Ayo Mulai</button>
+        </div>
+        <div class="md:flex justify-center">
+          <button class="md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
+            Saya Sudah Memiliki Akun
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- some book --}}
+  <section>
+    <div>
+    <div>
+
+    </div>
+    </div>
+  </section>
 
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
