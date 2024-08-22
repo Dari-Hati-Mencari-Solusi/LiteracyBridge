@@ -94,7 +94,7 @@
     <div class="md:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
       <div class="bg-center relative">
         <img src="./images/bg1.webp" alt="">
-        <img src="./images/char1.webp" alt=""  style="width: 75%" class="absolute top-0 left-0 translate-x-[15%] py-32">
+        <img src="./images/char2.webp" alt=""  style="width: 75%" class="absolute top-0 left-0 translate-x-[15%] py-32">
       </div>
     </div>
 
