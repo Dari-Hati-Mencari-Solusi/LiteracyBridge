@@ -11,8 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_preference_details', function (Blueprint $table) {
-            $table->id();
+        Schema::create('user_preference_details', function (Blueprint $table) {            
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("preference_id");
             $table->unsignedBigInteger("preference_type_id");
