@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/SignUp', function () {
-  return view('SignUp', [
+  return view('signup', [
     'tittle' => 'SignUp'
   ]);
 });

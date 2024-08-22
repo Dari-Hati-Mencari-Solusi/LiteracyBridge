@@ -18,7 +18,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased">
+<body class="antialiased font-poppins">
   <section class="flex flex-col md:flex-row w-full ">
 
        {{-- row 1 --}}

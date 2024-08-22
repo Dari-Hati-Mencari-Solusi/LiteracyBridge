@@ -18,13 +18,13 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased">
-  <section class="flex flex-col md:flex-row w-full">
+<body class="antialiased font-poppins">
+  <section class="flex flex-col md:flex-row w-full h-screen min-h-[650px]">
     {{-- row 1 --}}
-    <div class="md:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
-      <div class="bg-center relative">
-        <img src="./images/bg1.webp" alt="">
-        <img src="./images/char1.webp" alt=""  style="width: 75%" class="absolute top-0 left-0 translate-x-[15%] py-32">
+    <div class="h-full md:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
+      <div class="bg-center relative size-full">
+        <img src="./images/bg1.webp" alt="background image" class="size-full">
+        <img src="./images/char1.webp" alt="character" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       </div>
     </div>
 
@@ -33,7 +33,7 @@
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 class="mt-10 text-3xl font-bold leading-9 tracking-tight text-gray-900 text-start">Masuk</h2>
-          <p class="text-neutral-400 font-normal font-md">Masukan ke akun anda</p>
+          <p class="text-neutral-600 font-normal font-md">Masuk ke akun anda</p>
         </div>
 
         <div class="mt-3 sm:mx-auto sm:w-full sm:max-w-sm">
