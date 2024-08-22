@@ -4,7 +4,11 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    "./node_modules/flowbite/**/*.js",
   ],
+  plugins: [
+    require('flowbite/plugin')
+],
   theme: {
     extend: {
       fontFamily: {
@@ -60,10 +64,10 @@ module.exports = {
           200: "#999999",
           300: "#666666",
           400: "#333333",
-          500: "#000000",          
+          500: "#000000",
         },
         white: {
-          100: "#FFFFFF",          
+          100: "#FFFFFF",
           600: "#CCCCCC",
           700: "#999999",
           800: "#666666",
@@ -76,7 +80,7 @@ module.exports = {
         h3: "33px",
         h4: "28px",
         h5: "23px",
-        h6: "19px",        
+        h6: "19px",
         title1: "16px",
         title2: "13px",
         caption: "11px",
