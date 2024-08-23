@@ -22,8 +22,8 @@
   <section class="flex flex-col md:flex-row w-full h-screen min-h-[650px]">
     {{-- row 1 --}}
     <div class="h-full md:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
-      <div class="bg-center relative size-full">
-        <img src="./images/bg1.webp" alt="background image" class="size-full">
+      <div class="bg-center relative h-full w-full">
+        <img src="./images/bg1.webp" alt="background image" class="w-full h-full">
         <img src="./images/char1.webp" alt="character" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       </div>
     </div>
@@ -41,7 +41,7 @@
             <div>
               <label for="email" class="block text-sm font-normal leading-6 text-black-300">Email</label>
               <div class="mt-2">
-                <input id="email" name="email" type="email" autocomplete="new-username" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md" placeholder="Contoh@gmail.com">
+                <input id="email" name="email" type="email" autocomplete="new-username" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out" placeholder="Contoh@gmail.com">
               </div>
             </div>
 
@@ -50,19 +50,19 @@
                 <label for="password" class="block text-sm font-normal leading-6 text-black-300">Kata Sandi</label>
               </div>
               <div>
-                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3" placeholder="Masukan sandi anda ">
+                <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 transition-all duration-300 ease-in-out" placeholder="Masukan sandi anda ">
               </div>
               <div class="flex justify-between py-3">
-                <div class="flex items-center mb-4">
-                  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                  <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                <div class="flex items-center gap-x-3 mb-4">
+                  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                  <label for="default-checkbox" class="ms-2 text-sm text-neutral-900">Ingat saya</label>
                 </div>
-                <a href="#" class="font-normal text-black hover:text-indigo-500 text-sm hover:underline">Lupa kata sandi?</a>
+                <a href="#" class="text-neutral-900 hover:text-indigo-500 text-sm hover:underline">Lupa kata sandi?</a>
               </div>
             </div>
 
             <div>
-              <button type="submit" class="custom-button flex w-full justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-3 py-4 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ">Masuk</button>
+              <button type="submit" class="custom-button flex w-full justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-3 py-4 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l">Masuk</button>
             </div>
           </form>
 
