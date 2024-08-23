@@ -18,8 +18,8 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased font-poppins md:px-[160px] ">
-  <nav class="bg-white border-gray-200">
+<body class="antialiased font-poppins">
+  <nav class="bg-white border-gray-200 md:px-[160px]">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:pf-[22px]">
       <!-- Logo dan Navigasi -->
       <div class="flex items-center w-full md:w-auto md:space-x-[32px] rtl:space-x-reverse">
@@ -85,7 +85,7 @@
   </nav>
 
   {{-- hero section --}}
-  <section class="py-[114px]">
+  <section class="py-[114px] md:px-[160px]">
     <div class="md:flex md:justify-around justify-center items-center text-center">
       <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
         <img src="./images/char4.webp" alt="" class="md:w-[393px] w-[300px]">
@@ -108,7 +108,7 @@
   </section>
 
   {{-- some book1 --}}
-  <section>
+  <section class="md:px-[160px]">
     <div class="max-w-screen-lg mx-auto">
       <div class="font-medium text-[24px]">
         <h3>Buku Favorit</h3>
@@ -139,7 +139,7 @@
   </section>
 
 {{-- content 1 --}}
-  <section class="py-[114px]">
+  <section class="py-[114px]  md:px-[160px]">
     <div class="md:flex md:justify-between justify-center items-center">
       <div class="space-y-2 w-6/12">
         <h3 class="md:text-[33px] text-[28px] font-bold text-primary-500">Baca.Pahami.Berkembang</h3>
@@ -153,7 +153,7 @@
 
   {{-- content 2 --}}
   <section">
-    <div class="md:flex md:justify-between justify-center items-center">
+    <div class="md:flex md:justify-between justify-center items-center md:px-[160px]">
       <div class="w-6/12 md:w-auto flex justify-center mb-4 md:mb-0">
         <img src="./images/animasi2.webp" alt="" class="md:w-[290px] w-[300px]">
       </div>
@@ -166,7 +166,7 @@
 
   {{-- content 3 --}}
   <section class="py-[114px]">
-    <div class="md:flex md:justify-between justify-center items-center">
+    <div class="md:flex md:justify-between justify-center items-center md:px-[160px]">
       <div class="space-y-2 w-6/12">
         <h3 class="md:text-[33px] text-[28px] font-bold text-primary-500">Jembatan Pengetahuan</h3>
         <h6 class="font-normal">Literasi Baca adalah jembatan menuju mimpi Anda. Dengan membaca, Anda dapat mengakses pengetahuan dan inspirasi yang diperlukan untuk mewujudkan impian dan mencapai kesuksesan.</h6>
@@ -214,8 +214,9 @@
       <div class="text-center md:flex justify-center">
           <h1 class="text-primary-800 text-[48px] w-6/12 font-bold">Baca Dimana Saja, Kapan Saja</h1>
       </div>
-      <div class="">
-          <img src="./images/char5.webp" alt="">
+      <div class="h-[200px] relative">
+        <img src="./images/Rectangle12.webp" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
+        <img src="./images/char5.webp" alt="" class="absolute z-10 mx-auto h-full">
       </div>
     </div>
   </section>
