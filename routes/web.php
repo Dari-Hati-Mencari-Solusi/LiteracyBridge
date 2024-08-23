@@ -25,8 +25,8 @@ Route::get('/', function () {
   ]);
 });
 
-Route::get('/SignUp', function () {
-  return view('signup', [
+Route::get('/register', function () {
+  return view('sign-up', [
     'tittle' => 'SignUp'
   ]);
 });
