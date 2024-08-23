@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Home</title>
+  <title>Landing Page</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,8 +90,8 @@
       <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
         <img src="./images/char4.webp" alt="" class="md:w-[393px] w-[300px]">
       </div>
-      <div class="md:text-[33px] text-[28px] font-semibold space-y-5">
-        <div>
+      <div class="font-semibold space-y-5">
+        <div class="md:text-[33px] text-[28px] ">
           <h3>Baca Lebih Banyak Buku,</h3>
           <h3>Capai Lebih Jauh Ilmu.</h3>
         </div>
@@ -107,12 +107,116 @@
     </div>
   </section>
 
-  {{-- some book --}}
+  {{-- some book1 --}}
   <section>
-    <div>
-    <div>
-
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px]">
+        <h3>Buku Favorit</h3>
+      </div>
+      <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
+        <div class="md:text-left">
+          <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+      </div>
     </div>
+  </section>
+
+{{-- content 1 --}}
+  <section class="py-[114px]">
+    <div class="md:flex md:justify-between justify-center items-center">
+      <div class="space-y-2 w-6/12">
+        <h3 class="md:text-[33px] text-[28px] font-bold text-primary-500">Baca.Pahami.Berkembang</h3>
+        <h6 class="font-normal">Literacy Bridge adalah aplikasi yang menghubungkan Anda dengan buku-buku pilihan untuk membaca, memahami, dan berkembang. Tingkatkan literasi Anda dan raih potensi penuh melalui pengetahuan yang didapatkan.</h6>
+      </div>
+      <div class="w-6/12 md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/animasi.webp" alt="" class="md:w-[290px] w-[300px]">
+      </div>
+    </div>
+  </section>
+
+  {{-- content 2 --}}
+  <section">
+    <div class="md:flex md:justify-between justify-center items-center">
+      <div class="w-6/12 md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/animasi2.webp" alt="" class="md:w-[290px] w-[300px]">
+      </div>
+      <div class="space-y-2 w-6/12 text-right">
+        <h3 class="md:text-[33px] text-[28px] font-bold text-primary-500">Menjadi Motivasi Membaca</h3>
+        <h6 class="font-normal">Menghadirkan sistem ranking pembaca yang memotivasi Anda untuk membaca lebih banyak. Tingkatkan peringkat Anda dengan setiap buku yang selesai, dan raih penghargaan atas pencapaian literasi Anda.</h6>
+      </div>
+    </div>
+  </section>
+
+  {{-- content 3 --}}
+  <section class="py-[114px]">
+    <div class="md:flex md:justify-between justify-center items-center">
+      <div class="space-y-2 w-6/12">
+        <h3 class="md:text-[33px] text-[28px] font-bold text-primary-500">Jembatan Pengetahuan</h3>
+        <h6 class="font-normal">Literasi Baca adalah jembatan menuju mimpi Anda. Dengan membaca, Anda dapat mengakses pengetahuan dan inspirasi yang diperlukan untuk mewujudkan impian dan mencapai kesuksesan.</h6>
+      </div>
+      <div class="w-6/12 md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/animasi3.webp" alt="" class="md:w-[290px] w-[300px]">
+      </div>
+    </div>
+  </section>
+
+    {{-- some book 2--}}
+    <section>
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px]">
+        <h3>Buku Terbaru</h3>
+      </div>
+      <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
+        <div class="md:text-left">
+          <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- Content 4 --}}
+  <section>
+    <div class="py-5 md:py-24">
+      <div class="text-center md:flex justify-center">
+          <h1 class="text-primary-800 text-[48px] w-6/12 font-bold">Baca Dimana Saja, Kapan Saja</h1>
+      </div>
+      <div class="">
+          <img src="./images/char5.webp" alt="">
+      </div>
     </div>
   </section>
 
