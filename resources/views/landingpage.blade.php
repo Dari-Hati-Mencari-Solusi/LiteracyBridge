@@ -212,14 +212,83 @@
   <section>
     <div class="py-5 md:py-24">
       <div class="text-center md:flex justify-center">
-          <h1 class="text-primary-800 text-[48px] w-6/12 font-bold">Baca Dimana Saja, Kapan Saja</h1>
+        <h1 class="text-primary-800 text-[48px] w-5/12 font-bold mb-5 md:mb-10">Baca Dimana Saja, Kapan Saja</h1>
       </div>
-      <div class="h-[200px] relative">
-        <img src="./images/Rectangle12.webp" alt="" class="absolute inset-0 w-full h-full object-cover z-0">
-        <img src="./images/char5.webp" alt="" class="absolute z-10 mx-auto h-full">
+      <div class="relative" style="height:500px;">
+        <img src="./images/char5.webp" alt="" class="relative m-auto w-auto h-auto max-h-[500px] max-w-full z-10">
+        <img src="./images/Rectangle12.webp" alt="" class="absolute bottom-0 w-full max-h-[260px] object-cover z-0">
       </div>
     </div>
   </section>
+
+
+   {{-- some vidio --}}
+   <section>
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px]">
+        <h3>Vidio Literasi</h3>
+      </div>
+      <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
+        <div class="md:text-left">
+          <img src="./images/img1.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/img2.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/img3.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+        <div class="md:text-left">
+          <img src="./images/img4.webp" alt="" class="rounded-xl mx-auto">
+          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+          <p class="font-light">Author Jhon Doe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{-- papan peringkat --}}
+<section>
+  <div class="max-w-screen-lg mx-auto py-16 space-y-10">
+    <div class="font-medium text-[24px]">
+      <h3>Papan Peringkat </h3>
+    </div>
+    <div class="md:flex gap-32">
+      <div class="md:text-left">
+        <img src="./images/rank1.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank2.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank3.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank4.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+    </div>
+    <div class="md:flex gap-32">
+      <div class="md:text-left">
+        <img src="./images/rank5.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank6.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank7.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+      <div class="md:text-left">
+        <img src="./images/rank8.webp" alt="" class="rounded-xl mx-auto">
+      </div>
+    </div>
+  </div>
+</section>
 
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
