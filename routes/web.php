@@ -30,3 +30,7 @@ Route::get('/register', function () {
     'tittle' => 'SignUp'
   ]);
 });
+
+Route::get('/LandingPage', function () {
+  return view('landingpage');
+});
