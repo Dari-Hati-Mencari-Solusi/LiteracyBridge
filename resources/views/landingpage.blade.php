@@ -20,68 +20,64 @@
 
 <body class="antialiased font-poppins overflow-x-hidden">
   <nav class="bg-white border-gray-200 md:px-[160px] px-4">
-    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:pf-[22px]">
-      <!-- Logo dan Navigasi -->
-      <div class="flex items-center w-full md:w-auto md:space-x-[32px] rtl:space-x-reverse">
-        <a href="#" class="flex items-center">
-          <img src="./images/logo.webp" class="w-[56px]" alt="Flowbite Logo" />
-        </a>
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:py-[22px]">
+        <!-- Bagian Kiri: Logo dan Navigasi -->
+        <div class="flex items-center space-x-4">
+            <a href="#" class="flex items-center">
+                <img src="./images/logo.webp" class="w-[56px]" alt="Flowbite Logo" />
+            </a>
+            <!-- Navigasi Desktop -->
+            <ul class="hidden md:flex font-medium space-x-8 rtl:space-x-reverse">
+                <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
+                <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
+                <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
+            </ul>
+        </div>
 
-        <!-- Navigasi Desktop -->
-        <div class="hidden md:flex md:items-center md:space-x-8 md:ml-4 justify-between">
-          <ul class="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse mt-4 md:mt-0 border border-gray-100 md:border-0 rounded-lg md:bg-transparent">
-            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
-            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
-            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
-          </ul>
-
-          <!-- Form Pencarian dan Tombol Masuk untuk Desktop -->
-          <div class="flex items-center space-x-4 ml-auto">
+        <!-- Bagian Kanan: Form Pencarian dan Tombol Masuk -->
+        <div class="flex items-center space-x-4">
             <!-- Form Pencarian untuk Desktop -->
-            <div class="relative max-w-md">
-              <form action="" class="relative w-full">
-                <input type="search" class="peer cursor-pointer relative z-10 h-12 w-0 rounded-full border bg-transparent pl-12 outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
-                <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </form>
+            <div class="relative max-w-md hidden md:block">
+                <form action="" class="relative w-full">
+                    <input type="search" class="peer cursor-pointer relative z-10 h-12 w-0 rounded-full border bg-transparent pl-12 outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </form>
             </div>
             <!-- Tombol Masuk untuk Desktop -->
-            <button type="submit" class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]" style="color:white !important">Masuk</button>
-          </div>
+            <button type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]" style="color:white !important">Masuk</button>
         </div>
-      </div>
 
-      <!-- Tombol Menu Mobile -->
-      <button id="menu-toggle" type="button" class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-00 text-gray-400 hover:bg-[#39ADF8] focus:ring-white" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
+        <!-- Tombol Menu Mobile -->
+        <button id="menu-toggle" type="button" class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-00 text-gray-400 hover:bg-[#39ADF8] focus:ring-white" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
     </div>
 
     <!-- Navigasi Mobile -->
     <div id="navbar-default" class="hidden md:hidden w-full">
-      <ul class="font-medium flex flex-col space-y-2 mt-4 rounded-lg">
-        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
-        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
-        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
-      </ul>
-      <!-- Form Pencarian untuk Mobile -->
-      <div class="relative flex-grow max-w-md mt-4 md:hidden">
-        <form action="" class="relative w-full">
-          <input type="search" class="peer cursor-pointer relative z-10 h-12 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
-          <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </form>
-      </div>
-      <!-- Tombol Masuk untuk Mobile -->
-      <button type="submit" class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4" style="color:white !important">Masuk</button>
+        <ul class="font-medium flex flex-col space-y-2 mt-4 rounded-lg">
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
+        </ul>
+        <!-- Form Pencarian untuk Mobile -->
+        <div class="relative flex-grow max-w-md mt-4 md:hidden">
+            <form action="" class="relative w-full">
+                <input type="search" class="peer cursor-pointer relative z-10 h-12 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </form>
+        </div>
+        <!-- Tombol Masuk untuk Mobile -->
+        <button type="submit" class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4" style="color:white !important">Masuk</button>
     </div>
-  </nav>
-
+</nav>
 
 
   {{-- hero section --}}
@@ -334,17 +330,17 @@
 </section>
 
 {{-- footer --}}
-<footer class="mt-[450px]">  
+<footer class="mt-[450px]">
   <div class="relative bg-primary-500 md:bg-transparent">
     <div class="h-full w-full hidden absolute -z-10 md:block">
       <img src="{{ asset("images/RectangleFooter.webp") }}" alt="Footer Background" class="h-full w-full object-top">
     </div>
 
     <div>
-      <img src="{{ asset("images/char6.webp") }}" alt="" class="absolute -z-20 hidden left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block md:w-96 md:-top-5 xl:-top-14">
+      <img src="{{ asset("images/char6.webp") }}" alt="" class="absolute -z-20 hidden left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block md:w-[400px] md:-top-5 xl:-top-14">
     </div>
 
-    <ul class="px-6 py-20 pb-20 flex flex-wrap gap-11 text-white-100 md:gap-x-20 sm:justify-center md:px-28 lg:justify-between md:pt-64">            
+    <ul class="px-6 py-20 pb-20 flex flex-wrap gap-11 text-white-100 md:gap-x-20 sm:justify-center md:px-28 lg:justify-between md:pt-64">
       <li class="font-bold">
         <h6>Sosial Media</h6>
         <ul class="font-normal space-y-4 py-4">
@@ -365,16 +361,16 @@
       <li class="font-bold">
         <h6>Tentang Kami</h6>
         <ul class="font-normal space-y-4 py-4">
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Buku</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Video</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Peringkat</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Lencana</a>
           </li>
         </ul>
@@ -382,10 +378,10 @@
       <li class="font-bold">
         <h6>Kontak Kami</h6>
         <ul class="font-normal space-y-4 py-4">
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Email</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">+62374393823</a>
           </li>
         </ul>
@@ -393,13 +389,13 @@
       <li class="font-bold">
         <h6>Pusat Bantuan</h6>
         <ul class="font-normal space-y-4 py-4">
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Sekolah</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Bridge</a>
           </li>
         </ul>
@@ -407,20 +403,20 @@
       <li class="font-bold">
         <h6>Privasi Dan Ketentuan</h6>
         <ul class="font-normal space-y-4 py-4">
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Privasi</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Sekolah</a>
           </li>
-          <li class="group">            
+          <li class="group">
             <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Bridge</a>
           </li>
         </ul>
       </li>
-    </ul>  
-  </div>    
- 
+    </ul>
+  </div>
+
   <div class="bg-primary-500 text-white-100 px-6 py-10 flex items-center flex-col sm:flex-row sm:justify-between md:px-28">
     <div class="space-y-1.5">
       <div class="flex gap-x-3 items-center">

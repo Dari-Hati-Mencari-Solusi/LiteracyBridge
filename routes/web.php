@@ -17,6 +17,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/landingpage', function () {
+Route::get('/LandingPage', function () {
   return view('landingpage');
 });
