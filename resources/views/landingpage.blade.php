@@ -19,70 +19,70 @@
 </head>
 
 <body class="antialiased font-poppins overflow-x-hidden">
-  <nav class="bg-white border-gray-200 md:px-[160px]">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:pf-[22px]">
+  <nav class="bg-white border-gray-200 md:px-[160px] px-4">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:pf-[22px]">
       <!-- Logo dan Navigasi -->
       <div class="flex items-center w-full md:w-auto md:space-x-[32px] rtl:space-x-reverse">
         <a href="#" class="flex items-center">
           <img src="./images/logo.webp" class="w-[56px]" alt="Flowbite Logo" />
         </a>
+
+        <!-- Navigasi Desktop -->
+        <div class="hidden md:flex md:items-center md:space-x-8 md:ml-4 justify-between">
+          <ul class="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse mt-4 md:mt-0 border border-gray-100 md:border-0 rounded-lg md:bg-transparent">
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
+            <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
+          </ul>
+
+          <!-- Form Pencarian dan Tombol Masuk untuk Desktop -->
+          <div class="flex items-center space-x-4 ml-auto">
+            <!-- Form Pencarian untuk Desktop -->
+            <div class="relative max-w-md">
+              <form action="" class="relative w-full">
+                <input type="search" class="peer cursor-pointer relative z-10 h-12 w-0 rounded-full border bg-transparent pl-12 outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </form>
+            </div>
+            <!-- Tombol Masuk untuk Desktop -->
+            <button type="submit" class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]" style="color:white !important">Masuk</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Tombol Menu Mobile -->
-      <button data-collapse-toggle="navbar-default" type="button" class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <button id="menu-toggle" type="button" class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-00 text-gray-400 hover:bg-[#39ADF8] focus:ring-white" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
       </button>
+    </div>
 
-        <!-- Navigasi -->
-        <div class="hidden md:flex md:items-center md:mx-6">
-          <ul class="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse mt-4 md:mt-0 border border-gray-100 md:border-0 rounded-lg md:bg-transparent">
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a>
-            </li>
-            <li>
-              <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Navigasi Mobile -->
+    <div id="navbar-default" class="hidden md:hidden w-full">
+      <ul class="font-medium flex flex-col space-y-2 mt-4 rounded-lg">
+        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a></li>
+        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a></li>
+        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a></li>
+      </ul>
+      <!-- Form Pencarian untuk Mobile -->
+      <div class="relative flex-grow max-w-md mt-4 md:hidden">
+        <form action="" class="relative w-full">
+          <input type="search" class="peer cursor-pointer relative z-10 h-12 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </form>
       </div>
-
-      <!-- Navigasi Mobile -->
-      <div class="hidden md:hidden w-full" id="navbar-default">
-        <ul class="font-medium flex flex-col space-y-2 mt-4 border border-gray-100 rounded-lg bg-gray-50">
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Vidio</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">Peringkat</a>
-          </li>
-        </ul>
-      </div>
-
-      {{-- icon --}}
-      <div class="flex items-center">
-        <div class="mx-auto max-w-md">
-          <form action="" class="relative mx-auto w-max">
-            <input type="search"
-                  class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
-            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </form>
-        </div>
-
-
-        <!-- Tombol Masuk -->
-        <button type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4 " style="color:white !important">Masuk</button>
-      </div>
+      <!-- Tombol Masuk untuk Mobile -->
+      <button type="submit" class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4" style="color:white !important">Masuk</button>
     </div>
   </nav>
+
+
 
   {{-- hero section --}}
   <section class="py-[114px] md:px-[160px]">
@@ -107,47 +107,48 @@
     </div>
   </section>
 
-  {{-- some book1 --}}
-  <section class="md:px-[160px]">
+  <section class="md:px-[160px] px-8">
     <div class="max-w-screen-lg mx-auto">
       <div class="font-medium text-[24px] text-center md:text-start">
         <h3>Buku Favorit</h3>
       </div>
-      <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
-        <div class="md:text-left">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
 
-        <div class="md:text-left">
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
-        <div class="md:text-left">
+
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
-        <div class="md:text-left">
+
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
@@ -195,50 +196,49 @@
   </div>
 </section>
 
-
-
-
   {{-- some book2 --}}
-  <section class="md:px-[160px] md:py-10">
+  <section class="md:px-[160px] px-8">
     <div class="max-w-screen-lg mx-auto">
       <div class="font-medium text-[24px] text-center md:text-start">
-        <h3>Buku Terbaru</h3>
+        <h3>Buku Favorit</h3>
       </div>
-      <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
-        <div class="md:text-left">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca1.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
 
-        <div class="md:text-left">
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca2.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
-        <div class="md:text-left">
+
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca3.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
-        <div class="md:text-left">
+
+        <div class="flex flex-col items-center md:items-start">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl mx-auto transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="./images/literasimembaca4.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
-            <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
             <p class="font-light">Author John Doe</p>
           </a>
         </div>
@@ -258,37 +258,37 @@
 </section>
 
 {{-- some vidio --}}
-<section class="md:px-[160px] mt-24">
+<section class="md:px-[160px] px-8 mt-24">
   <div class="max-w-screen-lg mx-auto">
     <div class="font-medium text-[24px] text-center md:text-start">
       <h3>Vidio Literasi</h3>
     </div>
-    <div class="py-5 space-y-4 md:space-y-0 md:flex md:gap-4 w-full text-center">
-      <div class="md:text-left">
-        <a href="">
-          <img src="./images/img1.webp" alt="" class="rounded-xl mx-auto">
-          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+      <div class="flex flex-col items-center md:items-start">
+        <a href="#">
+          <img src="./images/img1.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+          <h6 class="font-normal pt-3">Judul Buku</h6>
           <p class="font-light">Author Jhon Doe</p>
         </a>
       </div>
-      <div class="md:text-left">
-        <a href="">
-          <img src="./images/img2.webp" alt="" class="rounded-xl mx-auto">
-          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+      <div class="flex flex-col items-center md:items-start">
+        <a href="#">
+          <img src="./images/img2.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+          <h6 class="font-normal pt-3">Judul Buku</h6>
           <p class="font-light">Author Jhon Doe</p>
         </a>
       </div>
-      <div class="md:text-left">
-        <a href="">
-          <img src="./images/img3.webp" alt="" class="rounded-xl mx-auto">
-          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+      <div class="flex flex-col items-center md:items-start">
+        <a href="#">
+          <img src="./images/img3.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+          <h6 class="font-normal pt-3">Judul Buku</h6>
           <p class="font-light">Author Jhon Doe</p>
         </a>
       </div>
-      <div class="md:text-left">
-        <a href="">
-          <img src="./images/img4.webp" alt="" class="rounded-xl mx-auto">
-          <h6 class="font-normal md:pt-3 pt-3">Judul Buku</h6>
+      <div class="flex flex-col items-center md:items-start">
+        <a href="#">
+          <img src="./images/img4.webp" alt="" class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+          <h6 class="font-normal pt-3">Judul Buku</h6>
           <p class="font-light">Author Jhon Doe</p>
         </a>
       </div>
@@ -296,44 +296,42 @@
   </div>
 </section>
 
-
 {{-- papan peringkat --}}
-<section class="md:px-[160px] py-12 mt-12">
+<section class="md:px-[160px] py-12 mt-10">
   <div class="max-w-screen-lg mx-auto space-y-10">
     <div class="font-medium text-[24px] text-center md:text-start">
       <h3>Papan Peringkat</h3>
     </div>
-    <div class="md:flex md:gap-8 space-y-8 md:space-y-0">
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank1.webp" alt="" class="rounded-xl h-[200px] object-cover">
+    <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank1.webp" alt="gambar rank 1" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank2.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank2.webp" alt="gambar rank 2" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank3.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank3.webp" alt="gambar rank 3" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank4.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank4.webp" alt="gambar rank 4" class="rounded-xl object-cover">
       </div>
     </div>
-    <div class="md:flex md:gap-8 space-y-8 md:space-y-0">
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank5.webp" alt="" class="rounded-xl h-[200px] object-cover">
+    <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank5.webp" alt="gambar rank 1" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank6.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank6.webp" alt="gambar rank 2" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank7.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank7.webp" alt="gambar rank 3" class="rounded-xl object-cover">
       </div>
-      <div class="flex-1 flex justify-center items-center">
-        <img src="./images/rank8.webp" alt="" class="rounded-xl h-[200px] object-cover">
+      <div class="flex justify-center items-center">
+        <img src="./images/rank8.webp" alt="gambar rank 4" class="rounded-xl object-cover">
       </div>
     </div>
   </div>
 </section>
-
 
 {{-- footer --}}
 <footer class="pt-64">
@@ -403,8 +401,8 @@
   </div>
 </footer>
 
-
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="{{ asset ('js/navbar.js') }}"></script>
 </body>
 
 </html>
