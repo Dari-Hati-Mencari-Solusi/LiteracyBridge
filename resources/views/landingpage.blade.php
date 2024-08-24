@@ -18,7 +18,7 @@
   @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased font-poppins">
+<body class="antialiased font-poppins overflow-x-hidden">
   <nav class="bg-white border-gray-200 md:px-[160px]">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:pf-[22px]">
       <!-- Logo dan Navigasi -->
@@ -50,7 +50,6 @@
         </div>
       </div>
 
-
       <!-- Navigasi Mobile -->
       <div class="hidden md:hidden w-full" id="navbar-default">
         <ul class="font-medium flex flex-col space-y-2 mt-4 border border-gray-100 rounded-lg bg-gray-50">
@@ -68,15 +67,16 @@
 
       {{-- icon --}}
       <div class="flex items-center">
-        <div class="border-[1.5px] p-2 rounded-full border-neutral-500 md:inline hidden">
-          <!-- SVG icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-neutral-600" viewBox="0 0 24 24" fill="none" fill-rule="evenodd">
-            <g fill="none" fill-rule="evenodd">
-              <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/>
-              <path fill="currentColor" d="M10.5 2a8.5 8.5 0 1 0 5.262 15.176l3.652 3.652a1 1 0 0 0 1.414-1.414l-3.652-3.652A8.5 8.5 0 0 0 10.5 2M4 10.5a6.5 6.5 0 1 1 13 0a6.5 6.5 0 0 1-13 0"/>
-            </g>
-          </svg>
+        <div class="mx-auto max-w-md">
+          <form action="" class="relative mx-auto w-max">
+            <input type="search"
+                  class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </form>
         </div>
+
 
         <!-- Tombol Masuk -->
         <button type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4 " style="color:white !important">Masuk</button>
@@ -198,7 +198,7 @@
 
 
 
-     {{-- some book2 --}}
+  {{-- some book2 --}}
   <section class="md:px-[160px] md:py-10">
     <div class="max-w-screen-lg mx-auto">
       <div class="font-medium text-[24px] text-center md:text-start">
@@ -256,9 +256,6 @@
     <img src="./images/Rectangle12.webp" alt="" class="absolute bottom-0 left-0 w-screen h-[28vh] md:h-[45vh] object-cover z-0">
   </div>
 </section>
-
-
-
 
 {{-- some vidio --}}
 <section class="md:px-[160px] mt-24">
@@ -336,6 +333,75 @@
     </div>
   </div>
 </section>
+
+
+{{-- footer --}}
+<footer class="pt-64">
+  <div class="relative w-full inset-0 h-screen">
+    <!-- Background and char image -->
+    <div class="absolute bg-cover bg-no-repeat">
+      <img src="./images/RectangleFooter.webp" alt="" class="object-cover">
+      <img src="./images/char6.webp" alt="" class="absolute top-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[25%] w-24 z-0">
+      <!-- Gambar char6 akan berada di tengah dan di atas RectangleFooter -->
+    </div>
+    <div class="md:flex md:py-56 md:space-x-6 gap-10 md:px-[160px] md:justify-center h-[500px] absolute bottom-0 w-full text-white" style="color:white !important">
+      <!-- Konten navigasi akan berada di bagian bawah dengan transformasi -->
+      <div class="font-bold">
+        <h6>Sosial Media</h6>
+        <div class="font-normal space-y-4 py-4">
+          <a href="#" class="block">Blog</a>
+          <a href="#" class="block">Instagram</a>
+          <a href="#" class="block">Facebook</a>
+          <a href="#" class="block">Youtube</a>
+        </div>
+      </div>
+      <div class="font-bold">
+        <h6>Tentang Kami</h6>
+        <div class="font-normal space-y-4 py-4">
+          <a href="#" class="block">Buku</a>
+          <a href="#" class="block">Video</a>
+          <a href="#" class="block">Peringkat</a>
+          <a href="#" class="block">Lencana</a>
+        </div>
+      </div>
+      <div class="font-bold">
+        <h6>Kontak Kami</h6>
+        <div class="font-normal space-y-4 py-4">
+          <a href="#" class="block">Email</a>
+          <a href="#" class="block">+62374393823</a>
+        </div>
+      </div>
+      <div class="font-bold">
+        <h6>Pusat Bantuan</h6>
+        <div class="font-normal space-y-4 py-4">
+          <a href="#" class="block">Pernyataan Umum</a>
+          <a href="#" class="block">Pernyataan Umum Sekolah</a>
+          <a href="#" class="block">Pernyataan Umum Bridge</a>
+        </div>
+      </div>
+      <div class="font-bold">
+        <h6>Privasi Dan Ketentuan</h6>
+        <div class="font-normal space-y-4 py-4">
+          <a href="#" class="block">Privasi</a>
+          <a href="#" class="block">Pernyataan Umum Sekolah</a>
+          <a href="#" class="block">Pernyataan Umum Bridge</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-primary-500 border-t-2 border-primary-600 p-10 md:flex justify-between md:px-[160px]">
+    <div>
+      <div class="md:flex space-x-3">
+        <img src="./images/logo.webp" alt="" class="w-[40px]">
+        <h1 class="uppercase font-bold text-2xl text-white">LITERACY BRIDGE</h1>
+      </div>
+      <h6 class="font-normal text-white">Sudahkah anda membaca hari ini?</h6>
+    </div>
+    <div class="flex items-center text-white">
+      <h1>© 2024 LiteracyBridge</h1>
+    </div>
+  </div>
+</footer>
 
 
 <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
