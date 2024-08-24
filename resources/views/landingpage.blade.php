@@ -247,7 +247,7 @@
   </section>
 
 <!-- Content 4 -->
-<section class="py-5 md:py-10 px-0 mt-5 relative">
+{{-- <section class="py-5 md:py-10 px-0 mt-5 relative">
   <div class="text-center md:flex md:justify-center">
     <h1 class="text-primary-800 text-[32px] md:text-[48px] w-full md:w-5/12 font-bold mb-5 md:mb-10">Baca Dimana Saja, Kapan Saja</h1>
   </div>
@@ -255,7 +255,7 @@
     <img src="./images/char5.webp" alt="" class="relative m-auto w-auto max-h-[500px] max-w-full object-contain z-10">
     <img src="./images/Rectangle12.webp" alt="" class="absolute bottom-0 left-0 w-screen h-[28vh] md:h-[45vh] object-cover z-0">
   </div>
-</section>
+</section> --}}
 
 {{-- some vidio --}}
 <section class="md:px-[160px] mt-24">
@@ -336,68 +336,102 @@
 
 
 {{-- footer --}}
-<footer class="pt-64">
-  <div class="relative w-full inset-0 h-screen">
-    <!-- Background and char image -->
-    <div class="absolute bg-cover bg-no-repeat">
-      <img src="./images/RectangleFooter.webp" alt="" class="object-cover">
-      <img src="./images/char6.webp" alt="" class="absolute top-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-[25%] w-24 z-0">
-      <!-- Gambar char6 akan berada di tengah dan di atas RectangleFooter -->
+<footer class="mt-[450px]">  
+  <div class="relative bg-primary-500 md:bg-transparent">
+    <div class="h-full w-full hidden absolute -z-10 md:block">
+      <img src="{{ asset("images/RectangleFooter.webp") }}" alt="Footer Background" class="h-full w-full object-top">
     </div>
-    <div class="md:flex md:py-56 md:space-x-6 gap-10 md:px-[160px] md:justify-center h-[500px] absolute bottom-0 w-full text-white" style="color:white !important">
-      <!-- Konten navigasi akan berada di bagian bawah dengan transformasi -->
-      <div class="font-bold">
-        <h6>Sosial Media</h6>
-        <div class="font-normal space-y-4 py-4">
-          <a href="#" class="block">Blog</a>
-          <a href="#" class="block">Instagram</a>
-          <a href="#" class="block">Facebook</a>
-          <a href="#" class="block">Youtube</a>
-        </div>
-      </div>
-      <div class="font-bold">
-        <h6>Tentang Kami</h6>
-        <div class="font-normal space-y-4 py-4">
-          <a href="#" class="block">Buku</a>
-          <a href="#" class="block">Video</a>
-          <a href="#" class="block">Peringkat</a>
-          <a href="#" class="block">Lencana</a>
-        </div>
-      </div>
-      <div class="font-bold">
-        <h6>Kontak Kami</h6>
-        <div class="font-normal space-y-4 py-4">
-          <a href="#" class="block">Email</a>
-          <a href="#" class="block">+62374393823</a>
-        </div>
-      </div>
-      <div class="font-bold">
-        <h6>Pusat Bantuan</h6>
-        <div class="font-normal space-y-4 py-4">
-          <a href="#" class="block">Pernyataan Umum</a>
-          <a href="#" class="block">Pernyataan Umum Sekolah</a>
-          <a href="#" class="block">Pernyataan Umum Bridge</a>
-        </div>
-      </div>
-      <div class="font-bold">
-        <h6>Privasi Dan Ketentuan</h6>
-        <div class="font-normal space-y-4 py-4">
-          <a href="#" class="block">Privasi</a>
-          <a href="#" class="block">Pernyataan Umum Sekolah</a>
-          <a href="#" class="block">Pernyataan Umum Bridge</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-primary-500 border-t-2 border-primary-600 p-10 md:flex justify-between md:px-[160px]">
+
     <div>
-      <div class="md:flex space-x-3">
-        <img src="./images/logo.webp" alt="" class="w-[40px]">
-        <h1 class="uppercase font-bold text-2xl text-white">LITERACY BRIDGE</h1>
-      </div>
-      <h6 class="font-normal text-white">Sudahkah anda membaca hari ini?</h6>
+      <img src="{{ asset("images/char6.webp") }}" alt="" class="absolute -z-20 hidden left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block md:w-96 md:-top-5 xl:-top-14">
     </div>
-    <div class="flex items-center text-white">
+
+    <ul class="px-6 py-20 pb-20 flex flex-wrap gap-11 text-white-100 md:gap-x-20 sm:justify-center md:px-28 lg:justify-between md:pt-64">            
+      <li class="font-bold">
+        <h6>Sosial Media</h6>
+        <ul class="font-normal space-y-4 py-4">
+          <li class="group">
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Blog</a>
+          </li>
+          <li class="group">
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Instagram</a>
+          </li>
+          <li class="group">
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Facebook</a>
+          </li>
+          <li class="group">
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Youtube</a>
+          </li>
+        </ul>
+      </li>
+      <li class="font-bold">
+        <h6>Tentang Kami</h6>
+        <ul class="font-normal space-y-4 py-4">
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Buku</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Video</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Peringkat</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Lencana</a>
+          </li>
+        </ul>
+      </li>
+      <li class="font-bold">
+        <h6>Kontak Kami</h6>
+        <ul class="font-normal space-y-4 py-4">
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Email</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">+62374393823</a>
+          </li>
+        </ul>
+      </li>
+      <li class="font-bold">
+        <h6>Pusat Bantuan</h6>
+        <ul class="font-normal space-y-4 py-4">
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Sekolah</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Bridge</a>
+          </li>
+        </ul>
+      </li>
+      <li class="font-bold">
+        <h6>Privasi Dan Ketentuan</h6>
+        <ul class="font-normal space-y-4 py-4">
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Privasi</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Sekolah</a>
+          </li>
+          <li class="group">            
+            <a href="#" class="block transition-all underline-offset-4 duration-500 group-hover:translate-x-4 group-hover:underline">Pernyataan Umum Bridge</a>
+          </li>
+        </ul>
+      </li>
+    </ul>  
+  </div>    
+ 
+  <div class="bg-primary-500 text-white-100 px-6 py-10 flex items-center flex-col sm:flex-row sm:justify-between md:px-28">
+    <div class="space-y-1.5">
+      <div class="flex gap-x-3 items-center">
+        <img src="{{ asset("images/logo.webp") }}" alt="LiteracyBridge Logo" class="w-[40px] inline-block">
+        <h1 class="inline-block uppercase font-extrabold text-litera text-xl md:text-h4">LITERACY BRIDGE</h1>
+      </div>
+      <h6 class="text-white text-base md:text-h6">Sudahkah anda membaca hari ini?</h6>
+    </div>
+    <div class="flex items-center text-white mt-3 sm:mt-0">
       <h1>© 2024 LiteracyBridge</h1>
     </div>
   </div>
