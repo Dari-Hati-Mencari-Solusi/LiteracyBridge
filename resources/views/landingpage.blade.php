@@ -243,7 +243,7 @@
   </section>
 
 <!-- Content 4 -->
-{{-- <section class="py-5 md:py-10 px-0 mt-5 relative">
+<section class="py-5 md:py-10 px-0 mt-5 relative">
   <div class="text-center md:flex md:justify-center">
     <h1 class="text-primary-800 text-[32px] md:text-[48px] w-full md:w-5/12 font-bold mb-5 md:mb-10">Baca Dimana Saja, Kapan Saja</h1>
   </div>
@@ -251,7 +251,7 @@
     <img src="./images/char5.webp" alt="" class="relative m-auto w-auto max-h-[500px] max-w-full object-contain z-10">
     <img src="./images/Rectangle12.webp" alt="" class="absolute bottom-0 left-0 w-screen h-[28vh] md:h-[45vh] object-cover z-0">
   </div>
-</section> --}}
+</section>
 
 {{-- some vidio --}}
 <section class="md:px-[160px] px-8 mt-24">
