@@ -30,3 +30,7 @@ Route::get('/register', function () {
     'tittle' => 'SignUp'
   ]);
 });
+
+Route::get('/user-preferences', function () {
+  return view('user-preferences');
+});
