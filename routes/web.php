@@ -34,3 +34,7 @@ Route::get('/register', function () {
 Route::get('/LandingPage', function () {
   return view('landingpage');
 });
+
+Route::get('/user-preferences', function () {
+  return view('user-preferences');
+});
