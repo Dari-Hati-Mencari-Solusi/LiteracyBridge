@@ -77,9 +77,13 @@ $(document).ready(function () {
     if (currentPreferenceIndex > 1) {
       currentPreferenceIndex--;
       updatePreferences();
-            
+                
       $("#btnNext").removeClass("hidden");
       $("button").addClass("hidden");            
+    }
+
+    if (currentPreferenceIndex ==  1) {
+      $("#btnBack").addClass("hidden");      
     }
   });
 });
