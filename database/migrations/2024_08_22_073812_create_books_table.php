@@ -22,6 +22,8 @@ return new class extends Migration
             $table->enum("format", ["pdf", "ePub", "text"])->default("pdf");
             $table->text("description")->nullable();
             $table->integer("like", unsigned:true)->nullable()->default(0);
+            $table->string("file_name");
+            $table->integer("total_page")->default(0);
             $table->timestamps();
         });
     }
