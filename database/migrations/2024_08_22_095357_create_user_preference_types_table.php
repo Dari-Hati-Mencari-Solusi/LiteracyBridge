@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('user_preference_types', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("preference_type_id");
-            $table->string("name");            
+            $table->string("name");
+            $table->string("icon_name")->nullable();
 
             $table->foreign("preference_type_id")->references("id")->on("user_preferences")->onDelete("cascade");
             $table->timestamps();
