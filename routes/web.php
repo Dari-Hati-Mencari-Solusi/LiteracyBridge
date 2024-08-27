@@ -38,3 +38,7 @@ Route::get('/LandingPage', function () {
 Route::get('/user-preferences', function () {
   return view('user-preferences');
 });
+
+Route::get('/collectionbook', function () {
+  return view('collectionbook');
+});
