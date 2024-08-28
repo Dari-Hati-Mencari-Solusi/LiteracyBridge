@@ -24,7 +24,7 @@ $(document).ready(function () {
       const previousPreferenceIndex = currentPreferenceIndex - 1;
 
       if (previousPreferenceIndex === index + 1) {
-        const preferenceCheckboxes = $(this).find("input[name='preferences']");
+        const preferenceCheckboxes = $(this).find("input[name='preferences[]']");
 
         // Periksa apakah ada checkbox yang dicentang
         const hasCheckedItem = preferenceCheckboxes.is(":checked");

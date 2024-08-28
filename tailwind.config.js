@@ -7,9 +7,6 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
     "./public/js/*.js"
   ],
-  plugins: [
-    require('flowbite/plugin')
-],
   theme: {
     extend: {
       fontFamily: {
@@ -89,6 +86,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
