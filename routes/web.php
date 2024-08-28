@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookCollectionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, "index"]);
+Route::get("/book-collection", [BookCollectionController::class, "index"]);
 
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
@@ -30,7 +32,7 @@ Route::middleware(["guest"])->group(function() {
 Route::middleware(["auth"])->group(function() {
   Route::get('/preference', [UserPreferenceController::class, "index"])->name("preference");
   Route::post('/preference', [UserPreferenceController::class, "store"]);
-  Route::post('/logout', [LogoutController::class, "index"])->name("logout");  
+  Route::post('/logout', [LogoutController::class, "index"])->name("logout");
 });
 
 
