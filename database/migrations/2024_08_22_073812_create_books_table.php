@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer("like", unsigned:true)->nullable()->default(0);
             $table->string("file_name");
             $table->integer("total_page")->default(0);
+            $table->string("cover_name");
             $table->timestamps();
         });
     }
