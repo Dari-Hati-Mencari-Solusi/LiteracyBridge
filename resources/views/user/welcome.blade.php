@@ -1,0 +1,277 @@
+@extends('user.layouts.main')
+@section('tab-title')
+  Welcome to LiteracyBridge
+@endsection
+@section('content')
+  {{-- hero section --}}
+  <section class="py-[114px] md:px-[160px]">
+    <div class="md:flex md:justify-around justify-center items-center text-center">
+      <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/char4.webp" alt="" class="md:w-[393px] w-[300px]">
+      </div>
+      <div class="font-semibold space-y-5">
+        <div class="md:text-[33px] text-[28px] ">
+          <h3>Baca Lebih Banyak Buku,</h3>
+          <h3>Capai Lebih Jauh Ilmu.</h3>
+        </div>
+        <div class="md:flex justify-center">
+          <button
+            class="md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[120px] py-3 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4"
+            style="color:white !important">Ayo Mulai</button>
+        </div>
+        <div class="md:flex justify-center">
+          <button
+            class="md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
+            Saya Sudah Memiliki Akun
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md:px-[160px] px-8">
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px] text-center md:text-start">
+        <h3>Buku Favorit</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca1.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca2.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca3.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca4.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- content 1 --}}
+  <section class="py-[114px] md:px-[160px] px-6">
+    <div class="flex flex-col-reverse md:flex-row md:justify-between justify-center items-center">
+      <div class="space-y-2 w-full md:w-6/12 text-center md:text-left">
+        <h3 class="text-[24px] md:text-[33px] font-bold text-primary-500">Baca. Pahami. Berkembang</h3>
+        <h6 class="font-normal text-sm md:text-base">Literacy Bridge adalah aplikasi yang menghubungkan Anda dengan
+          buku-buku pilihan untuk membaca, memahami, dan berkembang. Tingkatkan literasi Anda dan raih potensi penuh
+          melalui pengetahuan yang didapatkan.</h6>
+      </div>
+      <div class="w-full md:w-auto flex justify-center items-center mb-4 md:mb-0">
+        <img src="./images/animasi.webp" alt="" class="w-[260px] md:w-[290px]">
+      </div>
+    </div>
+  </section>
+
+  {{-- content 2 --}}
+  <section class="py-10 md:px-[160px] px-6 mt-[-24px]">
+    <div class="flex flex-col-reverse md:flex-row md:justify-between justify-center items-center">
+      <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0 order-2 md:order-1">
+        <img src="./images/animasi2.webp" alt="" class="w-[260px] md:w-[290px]">
+      </div>
+      <div class="space-y-2 w-full md:w-6/12 text-center md:text-right order-1 md:order-2">
+        <h3 class="text-[24px] md:text-[33px] font-bold text-primary-500">Menjadi Motivasi Membaca</h3>
+        <h6 class="font-normal text-sm md:text-base">Menghadirkan sistem ranking pembaca yang memotivasi Anda untuk
+          membaca lebih banyak. Tingkatkan peringkat Anda dengan setiap buku yang selesai, dan raih penghargaan atas
+          pencapaian literasi Anda.</h6>
+      </div>
+    </div>
+  </section>
+
+
+  {{-- content 3 --}}
+  <section class="py-16 md:px-[160px] px-6">
+    <div class="flex flex-col-reverse md:flex-row md:justify-between justify-center items-center">
+      <div class="space-y-2 w-full md:w-6/12 text-center md:text-left">
+        <h3 class="text-[24px] md:text-[33px] font-bold text-primary-500">Jembatan Pengetahuan</h3>
+        <h6 class="font-normal text-sm md:text-base">Literasi Baca adalah jembatan menuju mimpi Anda. Dengan membaca, Anda
+          dapat mengakses pengetahuan dan inspirasi yang diperlukan untuk mewujudkan impian dan mencapai kesuksesan.</h6>
+      </div>
+      <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
+        <img src="./images/animasi3.webp" alt="" class="w-[260px] md:w-[290px]">
+      </div>
+    </div>
+  </section>
+
+  {{-- some book2 --}}
+  <section class="md:px-[160px] px-8">
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px] text-center md:text-start">
+        <h3>Buku Favorit</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca1.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca2.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca3.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="./images/literasimembaca4.webp" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author John Doe</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content 4 -->
+  <section class="py-5 md:py-10 px-0 mt-5 relative">
+    <div class="text-center md:flex md:justify-center">
+      <h1 class="text-primary-800 text-[32px] md:text-[48px] w-full md:w-5/12 font-bold mb-5 md:mb-10">Baca Dimana Saja,
+        Kapan Saja</h1>
+    </div>
+    <div class="relative w-screen">
+      <img src="./images/char5.webp" alt=""
+        class="relative m-auto w-auto max-h-[500px] max-w-full object-contain z-10">
+      <img src="./images/Rectangle12.webp" alt=""
+        class="absolute bottom-0 left-0 w-screen h-[28vh] md:h-[45vh] object-cover z-0">
+    </div>
+  </section>
+
+  {{-- some vidio --}}
+  <section class="md:px-[160px] px-8 mt-24">
+    <div class="max-w-screen-lg mx-auto">
+      <div class="font-medium text-[24px] text-center md:text-start">
+        <h3>Vidio Literasi</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#">
+            <img src="./images/img1.webp" alt=""
+              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author Jhon Doe</p>
+          </a>
+        </div>
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#">
+            <img src="./images/img2.webp" alt=""
+              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author Jhon Doe</p>
+          </a>
+        </div>
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#">
+            <img src="./images/img3.webp" alt=""
+              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author Jhon Doe</p>
+          </a>
+        </div>
+        <div class="flex flex-col items-center md:items-start">
+          <a href="#">
+            <img src="./images/img4.webp" alt=""
+              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+            <h6 class="font-normal pt-3">Judul Buku</h6>
+            <p class="font-light">Author Jhon Doe</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- papan peringkat --}}
+  <section class="md:px-[160px] py-12 mt-10">
+    <div class="max-w-screen-lg mx-auto space-y-10">
+      <div class="font-medium text-[24px] text-center md:text-start">
+        <h3>Papan Peringkat</h3>
+      </div>
+      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
+        <div class="flex justify-center items-center">
+          <img src="./images/rank1.webp" alt="gambar rank 1" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank2.webp" alt="gambar rank 2" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank3.webp" alt="gambar rank 3" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank4.webp" alt="gambar rank 4" class="rounded-xl object-cover">
+        </div>
+      </div>
+      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
+        <div class="flex justify-center items-center">
+          <img src="./images/rank5.webp" alt="gambar rank 1" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank6.webp" alt="gambar rank 2" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank7.webp" alt="gambar rank 3" class="rounded-xl object-cover">
+        </div>
+        <div class="flex justify-center items-center">
+          <img src="./images/rank8.webp" alt="gambar rank 4" class="rounded-xl object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+@endsection
