@@ -17,7 +17,7 @@ class BookSeeder extends Seeder
             [
                 "title" => "Sangkuriang",
                 "slug" => "sangkuriang",
-                "author" => "Ikranegara, Tira",
+                "author" => "Ikranegara, Tira",            
                 "publication" => "2008-01-01",
                 "publisher" => "Surabaya : Serba Jaya, 2008",
                 "price" => 0,
@@ -26,7 +26,8 @@ class BookSeeder extends Seeder
                     Sangkuriang adalah legenda dari Jawa Barat tentang seorang pemuda bernama Sangkuriang yang jatuh cinta pada ibunya sendiri, Dayang Sumbi, tanpa menyadarinya. Untuk menghindari pernikahan, Dayang Sumbi meminta Sangkuriang membuat danau dan perahu dalam semalam. Ketika hampir selesai, Dayang Sumbi menggagalkan usahanya, membuat Sangkuriang marah dan menendang perahu hingga terbalik, yang kemudian menjadi Gunung Tangkuban Perahu.</p>",
                 "like" => 12,
                 "file_name" => "sangkuriang.pdf",
-                "total_page" => 3
+                "total_page" => 3,
+                "cover_name" => "cover-sangkuriang.jpg"                
             ],
             [
                 "title" => "Sejenak Hening: Menjalani Setiap Hari dengan Hidup Sehat",
@@ -43,7 +44,8 @@ class BookSeeder extends Seeder
                 ",
                 "like" => 112,
                 "file_name" => "sejenak-hening.pdf",
-                "total_page" => 326
+                "total_page" => 326,
+                "cover_name" => "cover-sejenak-hening.jpg"                
             ],
             [
                 "title" => "Merengkuh Kebahagiaan di Dunia yang Penuh Ketidakpastian",
@@ -58,7 +60,8 @@ class BookSeeder extends Seeder
                 ",
                 "like" => 500,
                 "file_name" => "merengkuh-kebahagiaan.pdf",
-                "total_page" => 384
+                "total_page" => 384,
+                "cover_name" => "cover-merengkuh-kebahagiaan.jpg"
             ],
             [
                 "title" => "Geochemical and biogeochemical reaction modeling",
@@ -73,7 +76,8 @@ class BookSeeder extends Seeder
                 ",
                 "like" => 1400,
                 "file_name" => "geochemical-and-biogeochemical-reaction-modeling.pdf",
-                "total_page" => 565
+                "total_page" => 565,
+                "cover_name" => "cover-geochemical.jpg"
             ],
             [
                 "title" => "Pedoman Umum Panen & PascaPanen Tanaman Obat",
@@ -88,7 +92,8 @@ class BookSeeder extends Seeder
                 ",
                 "like" => 0,
                 "file_name" => "sejenak-hening.pdf",
-                "total_page" => 62
+                "total_page" => 62,
+                "cover_name" => "cover-pedoman.jpg"
             ],       
         ];
 
