@@ -24,16 +24,22 @@ Route::get('/', [HomeController::class, "index"]);
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
   Route::get('/signup', [SignUpController::class, "index"])->name("register");
-  
+
 });
 
 Route::middleware(["auth"])->group(function() {
   Route::get('/preference', [UserPreferenceController::class, "index"])->name("preference");
   Route::post('/preference', [UserPreferenceController::class, "store"]);
-  Route::post('/logout', [LogoutController::class, "index"])->name("logout");  
+  Route::post('/logout', [LogoutController::class, "index"])->name("logout");
 });
 
 
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
+
+
+Route::get('/book-detail', function () {
+  return view('user.book-detail',
+);
+});
