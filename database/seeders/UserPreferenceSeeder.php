@@ -11,20 +11,20 @@ class UserPreferenceSeeder extends Seeder
   public function run(): void {
     $userPreferences = [
       [
-        "name" => "Asal tahu LiteracyBridge",
+        "name" => "asal",
         "question" => "Dari mana kamu tahu tentang Literacy Bridge?",        
       ],
       [
-        "name" => "Genre",
+        "name" => "genre",
         "question" => "Genre apa yang paling Anda sukai untuk dibaca?",
         "image_name" => "preference_character2.svg",
       ],
       [
-        "name" => "Waktu membaca",
+        "name" => "waktu",
         "question" => "Kapan biasanya anda membaca?",
       ],
       [
-        "name" => "Bahasa",
+        "name" => "bahasa",
         "question" => "Bahasa apa yang Anda lebih sukai untuk membaca?",
       ],      
     ];

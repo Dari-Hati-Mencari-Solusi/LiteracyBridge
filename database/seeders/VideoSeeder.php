@@ -14,11 +14,31 @@ class VideoSeeder extends Seeder
     public function run(): void
     {
         $videos = [
-            ["youtube_link" => "HrhvQBdx5rY"],
-            ["youtube_link" => "6vbYkN_Hqdg"],
-            ["youtube_link" => "dJMUKNi0OkQ"],
-            ["youtube_link" => "D8XPuRidZxY"],
-            ["youtube_link" => "0gNctcuH0FE"],
+            [
+                "title" => "Alasan Sebenarnya Orang Indonesia Malas Baca Buku",
+                "youtube_link" => "HrhvQBdx5rY",
+                "creator" => "Kok Bisa"
+            ],
+            [
+                "title" => "Cara Mengembangkan Kemampuan Berpikir Kritis (Motivasi Belajar dan Menulis)",
+                "youtube_link" => "6vbYkN_Hqdg",
+                "creator" => "Satu Persen - Indonesian Life School"
+            ],
+            [
+                "title" => "Cara Memiliki Wawasan dan Pengetahuan yang Luas",
+                "youtube_link" => "dJMUKNi0OkQ",
+                "creator" => "Salam Insipirasi"
+            ],
+            [
+                "title" => "Cara Meningkatkan Daya Ingat untuk Orang Pelupa (Penyebab Pelupa)",
+                "youtube_link" => "D8XPuRidZxY",
+                "creator" => "Satu Persen - Indonesian Life School"
+            ],
+            [
+                "title" => "Puasa Dopamin atau Hiburan - reset otak, hidup kembali, kecanduan gadget",
+                "youtube_link" => "0gNctcuH0FE",
+                "creator" => "Akbar Abi"
+            ],
         ];
 
         foreach ($videos as $video) {
