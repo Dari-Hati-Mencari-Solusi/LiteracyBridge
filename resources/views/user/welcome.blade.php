@@ -7,7 +7,8 @@
   <section class="py-[114px] md:px-[160px]">
     <div class="md:flex md:justify-around justify-center items-center text-center">
       <div class="w-full md:w-auto flex justify-center mb-4 md:mb-0">
-        <img src="./images/char4.webp" alt="" class="md:w-[393px] w-[300px]">
+        {{-- <img src="./images/char4.webp" alt="" > --}}
+        <iframe class="md:w-[393px] w-[300px]" src="https://lottie.host/embed/849e88e5-eea0-44f6-9038-9430c64f5674/Mdks9tSD7W.json"></iframe>
       </div>
       <div class="font-semibold space-y-5">
         <div class="md:text-[33px] text-[28px] ">

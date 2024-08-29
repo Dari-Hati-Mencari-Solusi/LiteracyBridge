@@ -22,7 +22,18 @@ class SignUpController extends Controller
         "email" => "required|email:dns|unique:users,email",
         "username" => "required|min:5|max:50",        
         "password" => "required|min:5|confirmed"
-      ]);
+      ],[
+        "fullname.required" => "Nama lengkap wajib diisi.",
+        "email.required" => "Alamat email wajib diisi.",
+        "email.email" => "Format alamat email tidak valid.",
+        "email.unique" => "Alamat email sudah terdaftar.",
+        "username.required" => "Username wajib diisi.",
+        "username.min" => "Username harus minimal 5 karakter.",
+        "username.max" => "Username tidak boleh lebih dari 50 karakter.",
+        "password.required" => "Password wajib diisi.",
+        "password.min" => "Password harus minimal 5 karakter.",
+        "password.confirmed" => "Konfirmasi password tidak cocok."
+    ]);
 
       $user = User::create([        
         "name" => $validatedData["fullname"],
@@ -40,7 +51,7 @@ class SignUpController extends Controller
 
     } catch (\Illuminate\Validation\ValidationException $e) {
       return redirect()->back()
-        ->withErrors(['error_message' => 'Terjadi kesalahan, cek kembali isianmu!'])
+        ->withErrors(['error_message' => $e->getMessage()])
         ->withInput();
     }
   } 
