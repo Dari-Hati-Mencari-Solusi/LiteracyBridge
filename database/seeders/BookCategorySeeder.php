@@ -12,68 +12,72 @@ class BookCategorySeeder extends Seeder
     {
         $bookCategories = [
             [
-                "name" => "Cerpen",
+                "name" => "cerpen",
                 "slug" => "cerpen",                
             ],                        
             [
-                "name" => "Fantasi Ilmiah",
+                "name" => "fantasi ilmiah",
                 "slug" => "fantasi-ilmiah",                
             ],                        
             [
-                "name" => "Sejarah",
+                "name" => "sejarah",
                 "slug" => "sejarah",                
             ],                        
             [
-                "name" => "Budaya",
+                "name" => "budaya",
                 "slug" => "budaya",                
             ],                        
             [
-                "name" => "Biografi",
+                "name" => "biografi",
                 "slug" => "biografi",                
             ],                        
             [
-                "name" => "Autobiografi",
+                "name" => "autobiografi",
                 "slug" => "autobiografi",                
             ],                        
             [
-                "name" => "Pengembangan Diri",
+                "name" => "pengembangan Diri",
                 "slug" => "pengembangan-diri",                
             ],                        
             [
-                "name" => "Sains",
+                "name" => "sains",
                 "slug" => "sains",                
             ],                        
             [
-                "name" => "Anak-Anak",
+                "name" => "anak-Anak",
                 "slug" => "anak-anak",                
             ],                        
             [
-                "name" => "Puisi",
+                "name" => "puisi",
                 "slug" => "puisi",                
             ],                        
             [
-                "name" => "Pendidikan",
+                "name" => "pendidikan",
                 "slug" => "pendidikan",                
             ],                        
             [
-                "name" => "Motivasi dan Insipirasi",
+                "name" => "motivasi dan Insipirasi",
                 "slug" => "motivasi-dan-insipirasi",                
             ],                        
             [
-                "name" => "Kesehatan",
+                "name" => "kesehatan",
                 "slug" => "kesehatan",                
             ],                        
             [
-                "name" => "Hobi",
+                "name" => "hobi",
                 "slug" => "hobi",                
             ],                        
             [
-                "name" => "Kepemimpinan",
+                "name" => "kepemimpinan",
                 "slug" => "kepemimpinan",                
             ],                        
             [
-                "name" => "Cerita Rakyat",
+                "name" => "cerita Rakyat",
                 "slug" => "cerita-rakyat",                
+            ],                        
+            [
+                "name" => "literasi",
+                "slug" => "literasi",                
             ],                        
         ];
 

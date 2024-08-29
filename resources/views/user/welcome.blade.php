@@ -16,14 +16,15 @@
         </div>
         <div class="md:flex justify-center">
           <button
+            id="btnGo"
             class="md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[120px] py-3 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4"
             style="color:white !important">Ayo Mulai</button>
         </div>
         <div class="md:flex justify-center">
-          <button
-            class="md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
+          <a href="{{ route("login") }}"
+            class="transition duration-300 md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
             Saya Sudah Memiliki Akun
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -34,51 +35,22 @@
       <div class="font-medium text-[24px] text-center md:text-start">
         <h3>Buku Favorit</h3>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca2.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca3.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca4.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-      </div>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        @foreach ($favoriteBooks as $book)
+          <li class="flex flex-col items-center md:items-start">
+            <a href="{{ "book/" . $book->slug }}" class="block overflow-hidden rounded-xl max-w-full">
+              <div class="h-64 relative overflow-hidden rounded-xl sm:h-[366px]">
+                <img src="{{ asset("images/$book->cover_name") }}" alt="Cover {{ $book->title }}"
+                  class="h-full w-full object-cover object-top rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+              </div>
+              <div class="flex flex-col justify-between">
+                <h6 class="mb-2 text-sm font-medium pt-3 line-clamp-2 hover:underline sm:text-base">{{ $book->title }}</h6>
+                <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
+              </div>
+            </a>
+          </li>             
+        @endforeach
+      </ul>
     </div>
   </section>
 
@@ -131,53 +103,24 @@
   <section class="md:px-[160px] px-8">
     <div class="max-w-screen-lg mx-auto">
       <div class="font-medium text-[24px] text-center md:text-start">
-        <h3>Buku Favorit</h3>
+        <h3>Buku Terbaru</h3>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca2.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca3.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca4.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            </div>
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author John Doe</p>
-          </a>
-        </div>
-      </div>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        @foreach ($latestBooks as $book)
+          <li class="flex flex-col items-center md:items-start">
+            <a href="{{ "book/" . $book->slug }}" class="block overflow-hidden rounded-xl max-w-full">
+              <div class="h-64 relative overflow-hidden rounded-xl sm:h-[366px]">
+                <img src="{{ asset("images/$book->cover_name") }}" alt="Cover {{ $book->title }}"
+                  class="h-full w-full object-cover object-top rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+              </div>
+              <div class="flex flex-col justify-between">
+                <h6 class="mb-2 text-sm font-medium pt-3 line-clamp-2 hover:underline sm:text-base">{{ $book->title }}</h6>
+                <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
+              </div>
+            </a>
+          </li>
+        @endforeach
+      </ul>
     </div>
   </section>
 
@@ -201,40 +144,18 @@
       <div class="font-medium text-[24px] text-center md:text-start">
         <h3>Vidio Literasi</h3>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#">
-            <img src="./images/img1.webp" alt=""
-              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author Jhon Doe</p>
-          </a>
-        </div>
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#">
-            <img src="./images/img2.webp" alt=""
-              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author Jhon Doe</p>
-          </a>
-        </div>
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#">
-            <img src="./images/img3.webp" alt=""
-              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author Jhon Doe</p>
-          </a>
-        </div>
-        <div class="flex flex-col items-center md:items-start">
-          <a href="#">
-            <img src="./images/img4.webp" alt=""
-              class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-            <h6 class="font-normal pt-3">Judul Buku</h6>
-            <p class="font-light">Author Jhon Doe</p>
-          </a>
-        </div>
-      </div>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
+        @foreach ($videos as $video)
+          <li class="flex flex-col items-center md:items-start">
+            <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank">
+              <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base">{{ $video->title }}</h6>
+              <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
+            </a>
+          </li>          
+        @endforeach
+      </ul>
     </div>
   </section>
 
@@ -274,4 +195,9 @@
       </div>
     </div>
   </section>
+@endsection
+@section("js-custom")
+  <script>
+    
+  </script>
 @endsection

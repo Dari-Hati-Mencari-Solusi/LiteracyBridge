@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
+            $table->string("title");            
             $table->string("youtube_link");            
-            $table->string("author")->default("LiteracyBridge");            
+            $table->string("creator")->default("LiteracyBridge");            
             $table->timestamps();
         });
     }

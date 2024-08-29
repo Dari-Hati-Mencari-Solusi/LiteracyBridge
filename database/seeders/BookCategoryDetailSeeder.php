@@ -34,6 +34,10 @@ class BookCategoryDetailSeeder extends Seeder
                 "book_id" => 5,
                 "book_category_id" => 13
             ],
+            [
+                "book_id" => 6,
+                "book_category_id" => 17
+            ],
         ];
 
         foreach ($bookCategoryDetails as $bookCategoryDetail) {

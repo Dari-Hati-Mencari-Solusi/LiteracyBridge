@@ -32,6 +32,6 @@ class UserPreferenceController extends Controller
       UserPreferenceDetail::create($formatPreference);
     }
     
-    redirect("/");
+    return redirect()->route("home");
   }
 }

@@ -17,7 +17,7 @@ class BookSeeder extends Seeder
             [
                 "title" => "Sangkuriang",
                 "slug" => "sangkuriang",
-                "author" => "Ikranegara, Tira",            
+                "author" => "Ikranegara, Tira",
                 "publication" => "2008-01-01",
                 "publisher" => "Surabaya : Serba Jaya, 2008",
                 "price" => 0,
@@ -27,7 +27,7 @@ class BookSeeder extends Seeder
                 "like" => 12,
                 "file_name" => "sangkuriang.pdf",
                 "total_page" => 3,
-                "cover_name" => "cover-sangkuriang.jpg"                
+                "cover_name" => "cover-sangkuriang.jpg"
             ],
             [
                 "title" => "Sejenak Hening: Menjalani Setiap Hari dengan Hidup Sehat",
@@ -45,7 +45,7 @@ class BookSeeder extends Seeder
                 "like" => 112,
                 "file_name" => "sejenak-hening.pdf",
                 "total_page" => 326,
-                "cover_name" => "cover-sejenak-hening.jpg"                
+                "cover_name" => "cover-sejenak-hening.jpg"
             ],
             [
                 "title" => "Merengkuh Kebahagiaan di Dunia yang Penuh Ketidakpastian",
@@ -94,7 +94,32 @@ class BookSeeder extends Seeder
                 "file_name" => "sejenak-hening.pdf",
                 "total_page" => 62,
                 "cover_name" => "cover-pedoman.jpg"
-            ],       
+            ],
+            [
+                "title" => "Literasi sebagai Praktik Sosial",
+                "slug" => "literasi-sebagai-praktik-sosial",
+                "author" => "Sofie Dewayani & Pratiwi Retnaningdyah",
+                "publication" => "2007-05-01",
+                "publisher" => "PT Remaja Rosdakarya",
+                "price" => 0,
+                "format" => "pdf",
+                "description" => "
+                    <p>
+                        Buku ini akan membantu para pembaca memperluas makna
+                        literasi. Sangat penting dibaca oleh siapapun yang peduli
+                        terhadap peningkatan kemampuan berliterasi masyarakat.
+                        Lebih-lebih di era digital yang luber informasi seperti saat
+                        ini. Pengalaman penulis bergulat dengan teks sangat menarik
+                        dan begitu dekat—terjangkau oleh diri saya yang ingin sekali
+                        bangsa ini menjadi literat dan peduli terhadap membaca dan
+                        menulis.
+                    </p>
+                ",
+                "like" => 345,
+                "file_name" => "literasi-sebagai-praktik-sosial.pdf",
+                "total_page" => 248,
+                "cover_name" => "cover-literasi-sebagai-praktik-sosial.jpg"
+            ],
         ];
 
         foreach ($books as $book) {
