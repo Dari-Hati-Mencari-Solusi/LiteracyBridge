@@ -28,7 +28,7 @@ Route::get("book/{book:slug}", [BookController::class, "detailBook"]);
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
   Route::get('/signup', [SignUpController::class, "index"])->name("register");
-  
+
 });
 
 Route::middleware(["auth"])->group(function() {
@@ -41,3 +41,9 @@ Route::middleware(["auth"])->group(function() {
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
+
+
+Route::get('/book-detail', function () {
+  return view('user.book-detail',
+);
+});
