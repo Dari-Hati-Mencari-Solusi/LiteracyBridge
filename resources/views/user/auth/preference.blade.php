@@ -46,8 +46,9 @@
               </div>
         
               <div class="mt-4 mb-10 flex flex-col lg:flex-row lg:gap-x-20 xl:gap-x-36">
-                <div class="w-32 mx-auto mt-6 lg:w-1/3">
-                  <img src="{{ asset("images/$preference->image_name") }}" alt="karakter preference" class="w-full">
+                <div class="w-32 mx-auto mt-6 lg:w-1/3 ">
+                  {{-- <img src="{{ asset("images/$preference->image_name") }}" alt="karakter preference" class="w-full"> --}}
+                  <iframe class="w-full h-[400px]" src="{{ $preference->link }}"></iframe>
                 </div>
         
                 <ul class="mt-16 flex flex-wrap gap-y-5 gap-x-6 md:gap-x-12 lg:w-4/6 xl:self-start">
