@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("name");            
             $table->string("question");            
-            $table->string("image_name")->default("preference_character.svg");            
+            $table->string("link")->nullable();            
             $table->text("description")->nullable();            
             $table->timestamps();
         });

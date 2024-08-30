@@ -12,20 +12,23 @@ class UserPreferenceSeeder extends Seeder
     $userPreferences = [
       [
         "name" => "asal",
-        "question" => "Dari mana kamu tahu tentang Literacy Bridge?",        
+        "question" => "Dari mana kamu tahu tentang Literacy Bridge?", 
+        "link" =>"https://lottie.host/embed/f78b69c6-fb81-4ddd-88e6-ef7c8f626c7d/3xH7pJRO8a.json",       
       ],
       [
         "name" => "genre",
         "question" => "Genre apa yang paling Anda sukai untuk dibaca?",
-        "image_name" => "preference_character2.svg",
+        "link" => "https://lottie.host/embed/79f2e8fb-c975-4c55-9446-27c8b5c5b3d9/kpY4S0bJ8l.json",
       ],
       [
         "name" => "waktu",
         "question" => "Kapan biasanya anda membaca?",
+        "link" =>"https://lottie.host/embed/f78b69c6-fb81-4ddd-88e6-ef7c8f626c7d/3xH7pJRO8a.json",
       ],
       [
         "name" => "bahasa",
         "question" => "Bahasa apa yang Anda lebih sukai untuk membaca?",
+        "link" =>"https://lottie.host/embed/79f2e8fb-c975-4c55-9446-27c8b5c5b3d9/kpY4S0bJ8l.json",
       ],      
     ];
 

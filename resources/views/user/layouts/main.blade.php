@@ -28,6 +28,7 @@
   
   {{-- js global --}}
   <script src="{{ asset('js/navbar.js') }}"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
   {{-- <script src="{{ asset("js/sidebar.js") }}"></script> --}}
   {{-- js custom --}}
   @yield("js-custom")

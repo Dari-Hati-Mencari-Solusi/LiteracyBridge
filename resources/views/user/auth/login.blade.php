@@ -24,8 +24,9 @@
     <div class="h-full md:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
       <div class="bg-center relative h-full w-full">
         <img src="./images/bg1.webp" alt="background image" class="w-full h-full">
-        <img src="./images/char1.webp" alt="character"
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {{-- <img src="./images/char1.webp" alt="character"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> --}}
+          <iframe class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[52rem] h-[44rem]" src="https://lottie.host/embed/885c852e-a278-439d-8a75-7a842bb3b987/udR1icHknq.json"></iframe>
       </div>
     </div>
 

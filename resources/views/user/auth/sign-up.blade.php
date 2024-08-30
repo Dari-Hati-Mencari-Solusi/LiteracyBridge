@@ -71,7 +71,7 @@
               <div class="mt-2">
                 <input id="text" name="username" type="text" value="{{ old('username') }}"
                   autocomplete="new-username" required
-                  class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+                  class="@error('username') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
                   placeholder="Jhon">
               </div>
             </div>
@@ -80,7 +80,7 @@
               <label for="email" class="block text-sm font-normal leading-6 text-black-300">Email</label>
               <div class="mt-2">
                 <input id="email" name="email" type="email" value="{{ old('email') }}" required
-                  class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+                  class="@error('email') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
                   placeholder="Contoh@gmail.com">
               </div>
             </div>
@@ -91,7 +91,7 @@
               </div>
               <div>
                 <input id="password" name="password" type="password" required
-                  class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+                  class="@error('password') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
                   placeholder="Masukan sandi anda">
               </div>
             </div>
@@ -132,8 +132,9 @@
     <div class="md:w-1/2 lg:w-8/12 md:bg-primary-400 bg-black hidden justify-center md:flex items-center">
       <div class="bg-center relative h-full w-full">
         <img src="./images/bg1.webp" alt="background image" class="w-full h-full">
-        <img src="./images/char2.webp" alt="character" style="width: 75%"
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {{-- <img src="./images/char2.webp" alt="character" style="width: 75%"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> --}}
+          <iframe class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[52rem] h-[52rem]" src="https://lottie.host/embed/324c744c-249d-451b-ba73-28b682e2469f/drQi7uD5UA.json"></iframe>
       </div>
     </div>
   </section>
