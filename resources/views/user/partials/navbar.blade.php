@@ -1,14 +1,14 @@
-<nav class="bg-white border-gray-200 md:px-[160px] px-4">
+<nav class="sticky top-0 z-20 bg-white-100 border-gray-200 md:px-[160px] px-4">
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:py-[22px]">
     <!-- Bagian Kiri: Logo dan Navigasi -->
     <div class="flex items-center space-x-4">
       <a href="#" class="flex items-center">
-        <img src="./images/logo.webp" class="w-[56px]" alt="Flowbite Logo" />
+        <img src="{{ asset('images/logo.webp') }}" class="w-[56px]" alt="Flowbite Logo" />
       </a>
       <!-- Navigasi Desktop -->
       <ul class="hidden md:flex font-medium space-x-8 rtl:space-x-reverse">
         <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
-            aria-current="page">Home</a></li>
+            aria-current="page">Buku</a></li>
         <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
             aria-current="page">Vidio</a></li>
         <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
@@ -21,7 +21,7 @@
       <!-- Form Pencarian untuk Desktop -->
       <div class="relative max-w-md hidden md:block">
         <form action="" class="relative w-full">
-          <input type="search"
+          <input type="search" placeholder=""
             class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
           <svg xmlns="http://www.w3.org/2000/svg"
             class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out"
@@ -32,13 +32,24 @@
       </div>
       <!-- Tombol Masuk untuk Desktop -->
       @auth()
-        <form action="{{ route("logout") }}" method="post">
-          @csrf
-          <button
-          type="submit" class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]"
-          style="color:white !important">Logout</button>         
-        </form>
-      @else  
+        <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+          class="w-12 h-12 bg-slate-200 rounded-full transition-all cursor-pointer hover:scale-110">
+          <img class="w-full h-full" src="{{ asset('images/default-avatar.svg') }}" alt="Default Avatar">
+        </div>
+        <div id="dropdown" class="z-20 hidden bg-white-100 divide-y divide-gray-100 rounded-lg shadow-lg w-44">
+          <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+            </li>
+            <li>
+              <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit" class="block px-4 py-2 hover:bg-gray-100 w-full text-start">Sign out</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      @else
         <a href="{{ route("login") }}"
         class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]"
         style="color:white !important">Masuk</a>    
@@ -58,10 +69,10 @@
   </div>
 
   <!-- Navigasi Mobile -->
-  <div id="navbar-default" class="hidden md:hidden w-full">
-    <ul class="font-medium flex flex-col space-y-2 mt-4 rounded-lg">
+  <div id="navbar-default" class="hidden md:hidden w-full py-4">
+    <ul class="font-medium flex flex-col space-y-2 rounded-lg">
       <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
-          aria-current="page">Home</a></li>
+          aria-current="page">Buku</a></li>
       <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
           aria-current="page">Vidio</a></li>
       <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
@@ -80,8 +91,13 @@
       </form>
     </div>
     <!-- Tombol Masuk untuk Mobile -->
-    <a href="{{ route("login") }}"
-      class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4"
-      style="color:white !important">Masuk</a>
+    @guest
+      <a 
+        href="{{ route('login') }}"
+        class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4"
+        style="color:white !important">
+        Masuk
+      </a>      
+    @endguest
   </div>
 </nav>
