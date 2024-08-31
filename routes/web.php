@@ -44,9 +44,3 @@ Route::middleware(["auth"])->group(function() {
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
-
-
-// Route::get('/book-detail', function () {
-//   return view('user.book-detail',
-// );
-// });
