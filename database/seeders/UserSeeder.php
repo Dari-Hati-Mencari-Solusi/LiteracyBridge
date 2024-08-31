@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt("12345"),
                 "phone_number" => "082123456789",
                 "addresse" => "Merauke, Papua",                
-                "point" => 12.2,                                   
+                "point" => 0,                                   
             ],
             [
                 'name' => "Yogi Lampung",

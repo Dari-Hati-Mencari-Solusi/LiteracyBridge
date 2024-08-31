@@ -20,8 +20,11 @@
     <div class="flex items-center space-x-4">
       <!-- Form Pencarian untuk Desktop -->
       <div class="relative max-w-md hidden md:block">
-        <form action="" class="relative w-full">
-          <input type="search" placeholder=""
+        <form action="{{ route("books.search") }}" method="GET" class="relative w-full">
+          @csrf
+          <input 
+            name="s"
+            type="search"
             class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
           <svg xmlns="http://www.w3.org/2000/svg"
             class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#39ADF8] peer-focus:stroke-[#39ADF8] transition-all duration-500 ease-in-out"
@@ -39,7 +42,7 @@
         <div id="dropdown" class="z-20 hidden bg-white-100 divide-y divide-gray-100 rounded-lg shadow-lg w-44">
           <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+              <a href="{{ route("profile") }}" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
             </li>
             <li>
               <form action="{{ route('logout') }}" method="post">

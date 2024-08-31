@@ -9,6 +9,7 @@ use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\UserPointController;
 use App\Http\Controllers\BookCollectionController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserPreferenceController;
 
 /*
@@ -24,7 +25,7 @@ use App\Http\Controllers\UserPreferenceController;
 
 Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/book', [BookCollectionController::class, "index"]);
-Route::get('/search-book', [BookController::class, "search"]);
+Route::get('/books/search', [BookController::class, "search"])->name("books.search");
 Route::get('/books/{book:slug}', [BookController::class, 'show'])->name('books.show');  
 
 
@@ -39,16 +40,11 @@ Route::middleware(["auth"])->group(function() {
   Route::post('/preference', [UserPreferenceController::class, "store"]);
   Route::post('/tambah-poin', [UserPointController::class, 'addPoints'])->name('tambahPoin');
   Route::post('/logout', [LogoutController::class, "index"])->name("logout");
-  Route::get('/books/read/{book:slug}', [BookController::class, 'read'])->name('books.read'); 
+  Route::get('/books/read/{book:slug}', [BookController::class, 'read'])->name('books.read');
+  Route::get('/profile', [ProfileController::class, 'index'])->name('profile');  
 });
 
 
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
-
-// profile
-Route::get('/profile', function () {
-  return view('user.profile',
-);
-});

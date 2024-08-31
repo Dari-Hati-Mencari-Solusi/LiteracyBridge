@@ -166,7 +166,7 @@
             <div class="flex items-end">
               <h5 class="text-neutral-800">
                 Menampilkan hasil untuk 
-                <b class="font-semibold text-black-500">Literasi</b>
+                <b class="font-semibold text-black-500">{{ $query }}</b>
               </h5>
             </div>
             <div class="space-y-2">
@@ -192,211 +192,21 @@
             </div>
           </div>
           <ul class="grid grid-cols-2 md:grid-cols-4 gap-12 py-5">
-            <!-- 1st Image -->
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
+            @foreach ($books as $book)
+            <li class="flex flex-col items-center md:items-start">
+              <a href="{{ route('books.show', $book->slug) }}" class="block overflow-hidden rounded-xl max-w-full">
+                <div class="h-64 relative overflow-hidden rounded-xl sm:h-[366px]">
+                  <img src="{{ asset("images/$book->cover_name") }}" alt="Cover {{ $book->title }}"
+                    class="h-full w-full object-cover object-top rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
+                <div class="flex flex-col justify-between">
+                  <h6 class="mb-2 text-sm font-medium pt-3 line-clamp-2 hover:underline sm:text-base">{{ $book->title }}
+                  </h6>
+                  <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
+                </div>
               </a>
             </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
-            <li class="relative flex flex-col items-center">
-              <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="./images/literasimembaca1.webp" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-                <h6 class="font-normal pt-3  text-black-500">Judul Buku</h6>
-                <p class="font-light text-black-400 text-title2">Author <span class="text-primary-800 text-title2">John
-                    Doe</span></p>
-              </a>
-            </li>
+          @endforeach
           </ul>
         </div>
       </div>
