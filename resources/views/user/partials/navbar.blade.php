@@ -3,7 +3,7 @@
     <!-- Bagian Kiri: Logo dan Navigasi -->
     <div class="flex items-center space-x-4">
       <a href="#" class="flex items-center">
-        <img src="./images/logo.webp" class="w-[56px]" alt="Flowbite Logo" />
+        <img src="{{ asset('images/logo.webp') }}" class="w-[56px]" alt="Flowbite Logo" />
       </a>
       <!-- Navigasi Desktop -->
       <ul class="hidden md:flex font-medium space-x-8 rtl:space-x-reverse">

@@ -15,7 +15,7 @@
         </svg>
         <div class="text-center md:text-left pt-2">
           <a href="#" class="text-black-300 font-light">/Literasi</a>
-          <a href="#" class="text-black-300 font-medium">/Literasi Membaca</a>
+          <a href="#" class="text-black-300 font-medium">/{{ $book->title }}</a>
         </div>
       </div>
     </div>
@@ -23,13 +23,13 @@
 
     <div class="md:flex w-full md:space-x-0 space-x-2">
       <div class="w-full md:w-1/3">
-        <img src="{{ asset('images/literasimembaca1.webp') }}" alt="gambar buku literasi membaca" class="rounded-2xl w-full md:w-64">
+        <img src="{{ asset("images/$book->cover_name") }}" alt="gambar buku literasi membaca" class="rounded-2xl w-full md:w-64">
       </div>
 
       <div class="md:flex md:w-2/3 md:space-x-4 flex flex-col w-full space-y-8">
         <div class="flex flex-col space-y-8">
           <div class=" md:py-0 pt-8 space-y-3">
-            <h3 class="md:text-[33px] text-[20px] font-semibold">Literasi Membaca</h3>
+            <h3 class="md:text-[33px] text-[20px] fon t-semibold">{{ $book->title }}</h3>
             <div class="md:flex md:space-x-4 space-y-2 md:space-y-0 flex-col md:flex-row"> <!-- Tambahkan flex-col pada versi mobile -->
               <div class="flex items-center space-x-1">
                 <img src="{{ asset('images/literasi.webp') }}" alt="gambar icon literasi" class="w-7 h-7">
@@ -39,7 +39,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
                   <path fill="#E98B8B" fill-rule="evenodd" d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"/>
                 </svg>
-                <span class="text-title1 text-black-900 font-medium px-1">12k</span>
+                <span class="text-title1 text-black-900 font-medium px-1">{{ $book->like }}</span>
               </div>
               <div class="flex items-center space-x-1">
                 <img src="{{ asset('images/point-fix.webp') }}" alt="gambar point" class="w-7 h-7">
@@ -47,12 +47,12 @@
               </div>
             </div>
 
-            <p class="text-black-400 pt-2">Author: <span class="text-primary-800">Jhon Doe</span></p>
+            <p class="text-black-400 pt-2">Author: <span class="text-primary-800">{{ $book->author }}</span></p>
           </div>
 
           <div class="space-y-3 md:pt-16">
             <div class="flex flex-col md:flex-row md:space-x-2 space-y-3 md:space-y-0">
-              <button class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">Baca</button>
+              <a href="{{ route('books.read', $book->id) }}" class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">Baca</a>
 
               <button class="w-full md:w-auto rounded-full bg-gradient-to-r flex justify-center pr-5 items-center gap-2 from-[#39ADF8] to-[#84CCFA] px-3 py-2 text-sm md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="md:w-7 md:h-7 w-5 h-5" viewBox="0 0 512 512">
@@ -88,7 +88,7 @@
     </div>
     <div class="relative w-full mx-auto bg-white">
       <title1 id="textContent" class="text-black-400 transition-all duration-500 ease-in-out overflow-hidden">
-        <span class="block">Buku ini menggali pentingnya literasi membaca dalam membentuk masyarakat yang cerdas dan berdaya saing. Di dalamnya, penulis menjelaskan bagaimana membaca bukan hanya sekadar aktivitas, tetapi kunci untuk membuka pintu pengetahuan, memperluas wawasan, dan memperkuat daya pikir kritis. Melalui berbagai contoh nyata, buku ini menunjukkan dampak positif dari kebiasaan membaca terhadap perkembangan pribadi dan sosial. Pembaca akan diajak untuk memahami strategi meningkatkan minat baca, mengenali berbagai genre, dan memanfaatkan teknologi digital untuk mengakses sumber daya literasi. Buku ini menjadi panduan praktis bagi siapa saja yang ingin menjadikan membaca sebagai bagian tak terpisahkan dari kehidupan sehari-hari...</span>
+        <span class="block">{{ $book->description }}</span>
         <span id="moreText" class="hidden transition-opacity duration-500 ease-in-out opacity-0">
         Buku ini juga menekankan pentingnya peran keluarga dan lingkungan dalam membudayakan membaca. Dengan panduan ini, membaca menjadi bagian tak terpisahkan dari kehidupan sehari-hari, membawa dampak positif yang berkelanjutan.Terima kasih telah membaca buku ini.
         </span>
