@@ -23,12 +23,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get("/book-collection", [BookCollectionController::class, "index"]);
-Route::get("book/{book:slug}", [BookController::class, "detailBook"]);    
+Route::get("book/{book:slug}", [BookController::class, "detailBook"]);
 
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
   Route::get('/signup', [SignUpController::class, "index"])->name("register");
-  
+
 });
 
 Route::middleware(["auth"])->group(function() {
@@ -41,3 +41,9 @@ Route::middleware(["auth"])->group(function() {
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
+
+// profile
+Route::get('/profile', function () {
+  return view('user.profile',
+);
+});
