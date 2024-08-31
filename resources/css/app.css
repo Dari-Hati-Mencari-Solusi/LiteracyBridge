@@ -18,10 +18,11 @@
   body {
     font-family: "Poppins", sans-serif;
   }
-  
+
   @apply component {
     .bg-thumb {
       @apply bg-[#39ADF8]
     }
   }
 }
+

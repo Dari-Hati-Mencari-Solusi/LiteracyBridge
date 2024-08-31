@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('tab-title')</title>
 
@@ -20,7 +21,7 @@
 <body class="antialiased font-poppins overflow-x-hidden">
   @include("user.partials.navbar")
 
-  <main>
+  <main>  
     @yield("content")
   </main>
   
@@ -28,8 +29,7 @@
   
   {{-- js global --}}
   <script src="{{ asset('js/navbar.js') }}"></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-  {{-- <script src="{{ asset("js/sidebar.js") }}"></script> --}}
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>   
   {{-- js custom --}}
   @yield("js-custom")
 </body>
