@@ -46,3 +46,9 @@ Route::middleware(["auth"])->group(function() {
 // Login & Register
 Route::post('/login', [LoginController::class, "login"]);
 Route::post("/signup", [SignUpController::class, "store"]);
+
+// profile
+Route::get('/profile', function () {
+  return view('user.profile',
+);
+});
