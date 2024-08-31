@@ -11,15 +11,20 @@ class UserPointController extends Controller
     public function addPoints(Request $request)
     {
         $user = Auth::user();
-
+        $user = User::findOrFail($user->id);
+        
         if ($user) {
             // User terautentikasi, bisa lanjut ke proses penyimpanan
-            $user->point += 5;
-            // $user->save();
+            
+            $willUpdate = [
+                "point" => $user->point += 5.0
+            ];
+            
+            $user->update($willUpdate);
 
-            return response()->json(['status' => 'success', 'points' => $user->point]);
-        } else {
-            // Tidak ada user yang terautentikasi
+            $updatedUser = User::findOrFail($user->id);
+            return response()->json(['status' => 'success', 'points' => $updatedUser->point]);
+        } else {            
             return response()->json(['status' => 'error', 'message' => 'User not authenticated'], 401);
         }
     }

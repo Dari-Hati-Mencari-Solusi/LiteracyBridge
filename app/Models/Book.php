@@ -35,4 +35,9 @@ class Book extends Model
     public static function getRecommendedBooksByUserPreference($byName = "genre", $user = null){
         // return DB::table("user_preference_details")->where("user");
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

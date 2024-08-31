@@ -7,6 +7,7 @@
 @section('content')
 <section>
   <div class="flex justify-center py-16">
+    <input type="hidden" name="inpFileName" value="{{ $book->file_name }}">
     <div class="w-full md:w-2/4 flex-wrap px-6">
       <div class="px-5">
         <img src="{{ asset("images/$book->cover_name") }}" alt="gambar buku literasi membaca" class="rounded-2xl w-full md:w-64 mx-auto">
@@ -78,126 +79,10 @@
   </div>
 
 </section>
-
-
-{{-- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<script src="https://cdnjs.com/libraries/pdf.js"></script> --}}
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
-
-
-<script src="{{ asset('js/pdfviewer.js') }}"></script>
-<script>
-  let pdfviewer = new PdfViewer;
-</script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
-{{-- <script src="{{ asset('js/pdfviewer.js') }}"></script> --}}
-<script>
-  class PdfViewer {
-    constructor(url, canvasId, finishButtonId) {
-        this.url = url;
-        this.canvasId = canvasId;
-        this.finishButtonId = finishButtonId;
-        this.pdfDoc = null;
-        this.pageNum = 1;
-        this.numPages = 0;
-
-        this.init();
-    }
-
-    init() {
-        this.getData(this.pageNum);
-        document.addEventListener('DOMContentLoaded', () => {
-            this.setupFinishButton();
-        });
-    }
-
-    getData(pageNum) {
-        pdfjsLib
-            .getDocument(this.url)
-            .promise.then(res => {
-                this.pdfDoc = res;
-                this.numPages = res.numPages;
-                this.renderPage(pageNum);
-                this.checkIfLastPage();
-            });
-    }
-
-    renderPage(num) {
-        let canvas = document.querySelector(this.canvasId);
-        let ctx = canvas.getContext('2d');
-        let scale = 1.5;
-
-        this.pdfDoc.getPage(num).then(page => {
-            const viewport = page.getViewport({ scale });
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-
-            const renderCtx = {
-                canvasContext: ctx,
-                viewport
-            };
-
-            page.render(renderCtx).promise.then(() => {
-                this.checkIfLastPage();
-            });
-        });
-    }
-
-    showPrevPage() {
-        if (this.pageNum <= 1) {
-            return;
-        }
-        this.pageNum--;
-        this.renderPage(this.pageNum);
-    }
-
-    showNextPage() {
-        if (this.pageNum >= this.numPages) {
-            return;
-        }
-        this.pageNum++;
-        this.renderPage(this.pageNum);
-        this.checkIfLastPage();
-    }
-
-    checkIfLastPage() {
-        const finishButton = document.querySelector(this.finishButtonId);
-        if (finishButton) {
-            finishButton.style.display = (this.pageNum === this.numPages) ? 'block' : 'none';
-        }
-    }
-
-    setupFinishButton() {
-        const finishButton = document.querySelector(this.finishButtonId);        
-        if (finishButton) {
-            finishButton.addEventListener('click', () => {
-                fetch('/tambah-poin', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-                    },
-                    body: JSON.stringify({ userId: finishButton.dataset.userId })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Poin berhasil ditambahkan:', data);
-                    // Redirect or other actions after the point is successfully added
-                })
-                .catch(error => console.error('Terjadi kesalahan:', error));
-            });
-        }
-    }
-}
-    const pdfViewer = new PdfViewer('/pdfs/sangkuriang.pdf', '#pdfArea', '#finish-reading-button');
-
-    document.getElementById('prev-page').addEventListener('click', () => {
-        pdfViewer.showPrevPage();
-    });
-
-    document.getElementById('next-page').addEventListener('click', () => {
-        pdfViewer.showNextPage();
-    });
-
-</script>
+@endsection
+@section("js-custom")
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="{{ asset('js/pdfviewer.js') }}"></script>
 @endsection

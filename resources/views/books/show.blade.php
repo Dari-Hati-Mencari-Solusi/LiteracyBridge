@@ -1,6 +1,6 @@
 @extends('user.layouts.main')
 @section('tab-title')
-  Home - LiteracyBridge
+  Buku {{ $book->title }} - LiteracyBridge
 @endsection
 @section('content')
 
@@ -52,7 +52,9 @@
 
           <div class="space-y-3 md:pt-16">
             <div class="flex flex-col md:flex-row md:space-x-2 space-y-3 md:space-y-0">
-              <a href="{{ route('books.read', $book->id) }}" class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">Baca</a>
+              <a href="{{ route('books.read', $book->slug) }}" class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">
+                Baca
+              </a>
 
               <button class="w-full md:w-auto rounded-full bg-gradient-to-r flex justify-center pr-5 items-center gap-2 from-[#39ADF8] to-[#84CCFA] px-3 py-2 text-sm md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">
                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="md:w-7 md:h-7 w-5 h-5" viewBox="0 0 512 512">
@@ -303,12 +305,12 @@
                   </a>
                 </div>
               </div>
-              <div class="md:flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6" viewBox="0 0 16 16">
+              <div class="md:flex items-center group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110" viewBox="0 0 16 16">
                   <path fill="#84CCFA" d="M8 13c3.866 0 7-2 7-6s-3.134-6-7-6s-7 2-7 6c0 2.16.914 3.737 2.364 4.73l.09 2.161a1.157 1.157 0 0 0 1.857.872l2.322-1.77Q7.816 13 8 13" />
                   <path fill="#39ADF8" d="M8 13c3.866 0 7-2 7-6s-3.134-6-7-6s-7 2-7 6c0 2.16.914 3.737 2.364 4.73l.09 2.161a1.157 1.157 0 0 0 1.857.872l2.322-1.77Q7.816 13 8 13" />
                 </svg>
-                <a href="#" id="show-popup" class="text-title2 text-primary-500 px-2">Lihat 12 balasan</a>
+                <a href="#" id="show-popup" class="text-title2 text-primary-500 px-2 transition-all group-hover:underline group-hover:scale-110">Lihat 12 balasan</a>
               </div>
 
               <!-- Popup -->
@@ -461,12 +463,12 @@
                     </a>
                   </div>
                 </div>
-                <div class="md:flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6" viewBox="0 0 16 16">
+                <div class="md:flex items-center group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110" viewBox="0 0 16 16">
                   <path fill="#84CCFA" d="M8 13c3.866 0 7-2 7-6s-3.134-6-7-6s-7 2-7 6c0 2.16.914 3.737 2.364 4.73l.09 2.161a1.157 1.157 0 0 0 1.857.872l2.322-1.77Q7.816 13 8 13" />
                   <path fill="#39ADF8" d="M8 13c3.866 0 7-2 7-6s-3.134-6-7-6s-7 2-7 6c0 2.16.914 3.737 2.364 4.73l.09 2.161a1.157 1.157 0 0 0 1.857.872l2.322-1.77Q7.816 13 8 13" />
                 </svg>
-                <a href="#" id="show-popup2" class="text-title2 text-primary-500 px-2">Lihat 12 balasan</a>
+                <a href="#" id="show-popup2" class="text-title2 text-primary-500 px-2 transition-all group-hover:underline group-hover:scale-110">Lihat 12 balasan</a>
               </div>
 
               <!-- Popup -->
@@ -672,7 +674,8 @@
   </div>
 </section>
 
-<script src="{{ asset('js/popup.js') }}"></script>
-<script src="{{ asset('js/showtext.js') }}"></script>
-<script src="{{ asset('js/navbar.js') }}"></script>
+@endsection
+@section("js-custom")  
+  <script src="{{ asset('js/popup.js') }}"></script>
+  <script src="{{ asset('js/showtext.js') }}"></script>  
 @endsection

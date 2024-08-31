@@ -28,12 +28,8 @@
   @include("user.partials.footer")
   
   {{-- js global --}}
-  {{-- <script src="{{ asset('js/navbar.js') }}"></script> --}}
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-  {{-- <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-  <script src="https://cdnjs.com/libraries/pdf.js"></script> --}}
-  {{-- <script src="{ asset('js/pdf.js') }"></script> --}}
-  {{-- <script src="{{ asset("js/sidebar.js") }}"></script> --}}
+  <script src="{{ asset('js/navbar.js') }}"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>   
   {{-- js custom --}}
   @yield("js-custom")
 </body>

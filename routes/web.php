@@ -24,8 +24,8 @@ use App\Http\Controllers\UserPreferenceController;
 
 Route::get('/', [HomeController::class, "index"])->name("home");
 Route::get('/book-collection', [BookCollectionController::class, "index"]);
-Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');  
-Route::get('/books/read/{id}', [BookController::class, 'read'])->name('books.read'); 
+Route::get('/books/{book:slug}', [BookController::class, 'show'])->name('books.show');  
+Route::get('/books/read/{book:slug}', [BookController::class, 'read'])->name('books.read'); 
 
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
