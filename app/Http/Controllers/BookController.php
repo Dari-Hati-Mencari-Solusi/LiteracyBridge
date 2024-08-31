@@ -21,7 +21,14 @@ class BookController extends Controller
     return view('user.books.read', ['book' => $book]);
   }
 
-  public function search(){
-    return view("user.books.searchbook");
+  public function search(Request $request){
+
+    $query = $request->input('s');
+    
+    $books = Book::where('title', 'LIKE', "%{$query}%")
+              ->orWhere('author', 'LIKE', "%{$query}%")                 
+              ->get();
+
+    return view("user.books.searchbook", compact("books", "query"));
   }
 }

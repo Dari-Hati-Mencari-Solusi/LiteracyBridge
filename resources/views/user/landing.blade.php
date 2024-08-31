@@ -125,7 +125,7 @@
     <div class="max-w-screen-lg mx-auto space-y-10">
       <div class="grid grid-cols-4 md:grid-cols-8 gap-12 px-6 md:px-0">
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/rankunlock.webp') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/rankUnlock.webp') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
           <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
