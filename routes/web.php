@@ -23,9 +23,10 @@ use App\Http\Controllers\UserPreferenceController;
 */
 
 Route::get('/', [HomeController::class, "index"])->name("home");
-Route::get('/book-collection', [BookCollectionController::class, "index"]);
+Route::get('/book', [BookCollectionController::class, "index"]);
+Route::get('/search-book', [BookController::class, "search"]);
 Route::get('/books/{book:slug}', [BookController::class, 'show'])->name('books.show');  
-Route::get('/books/read/{book:slug}', [BookController::class, 'read'])->name('books.read'); 
+
 
 Route::middleware(["guest"])->group(function() {
   Route::get('/login', [LoginController::class, "index"])->name("login");
@@ -38,6 +39,7 @@ Route::middleware(["auth"])->group(function() {
   Route::post('/preference', [UserPreferenceController::class, "store"]);
   Route::post('/tambah-poin', [UserPointController::class, 'addPoints'])->name('tambahPoin');
   Route::post('/logout', [LogoutController::class, "index"])->name("logout");
+  Route::get('/books/read/{book:slug}', [BookController::class, 'read'])->name('books.read'); 
 });
 
 

@@ -2,12 +2,12 @@
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:py-[22px]">
     <!-- Bagian Kiri: Logo dan Navigasi -->
     <div class="flex items-center space-x-4">
-      <a href="#" class="flex items-center">
+      <a href="{{ route("home") }}" class="flex items-center">
         <img src="{{ asset('images/logo.webp') }}" class="w-[56px]" alt="Flowbite Logo" />
       </a>
       <!-- Navigasi Desktop -->
       <ul class="hidden md:flex font-medium space-x-8 rtl:space-x-reverse">
-        <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
+        <li><a href="/book" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
             aria-current="page">Buku</a></li>
         <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
             aria-current="page">Vidio</a></li>
@@ -71,7 +71,7 @@
   <!-- Navigasi Mobile -->
   <div id="navbar-default" class="hidden md:hidden w-full py-4">
     <ul class="font-medium flex flex-col space-y-2 rounded-lg">
-      <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
+      <li><a href="/book" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
           aria-current="page">Buku</a></li>
       <li><a href="#" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
           aria-current="page">Vidio</a></li>

@@ -15,6 +15,11 @@ class HomeController extends Controller
         order: "desc"
       );
 
+      $favoriteBooks = Book::getSortedBooks(
+        sortedColumn: "like",
+        order: "desc"      
+      );    
+
       $videos = Video::getVideos(4);
 
       if (Auth::check()) {                
@@ -26,15 +31,10 @@ class HomeController extends Controller
 
         return view("user.landing",
           compact(
-            "literationBooks", "latestBooks", "videos"
+            "favoriteBooks", "literationBooks", "latestBooks", "videos"
           )
         );
-      }
-
-      $favoriteBooks = Book::getSortedBooks(
-        sortedColumn: "like",
-        order: "desc"      
-      );      
+      }        
 
       return view(
         "user.welcome", 
