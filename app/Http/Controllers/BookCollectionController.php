@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class BookCollectionController extends Controller {
   public function index() {
-    return view("user.books.book-collection");
+    $books = Book::all();
+    return view("user.books.book-collection", compact("books"));
   }
 }
