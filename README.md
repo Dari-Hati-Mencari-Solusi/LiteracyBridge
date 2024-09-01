@@ -72,3 +72,5 @@ php artisan serve
 Run your laravel ip in web browser
 
 **127.0.0.1:8000** 
+Link Website : https://literacybridge.my.id/
+Video DEMO : https://drive.google.com/file/d/1uZstyMMHA1KYUSysx2v5QkRZb-HVVAUn/view?usp=sharing
