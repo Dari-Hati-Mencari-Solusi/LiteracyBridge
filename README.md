@@ -12,7 +12,7 @@
 </p>
 </br>
 <div align="center">Link Website : https://literacybridge.my.id/ </br>
-Video DEMO : https://drive.google.com/file/d/1uZstyMMHA1KYUSysx2v5QkRZb-HVVAUn/view?usp=sharing</div>
+Video DEMO : https://drive.google.com/file/d/1uZstyMMHA1KYUSysx2v5QkRZb-HVVAUn/view?usp=sharing or </div>br> Youtube : https://youtu.be/GByoRiayDVI?si=hqwW4kltyQvnQzDv</div>
 <br/>
 <br/>
 <br/>
