@@ -10,14 +10,16 @@
     Literacy Bridge adalah platform berbasis web yang memungkinkan siswa untuk membaca buku digital dan memperoleh poin berdasarkan jumlah halaman yang dibaca. Poin ini diakumulasi untuk menentukan peringkat           siswa secara nasional, yang mendorong kompetisi sehat dan semangat membaca.    
   </small>
 </p>
-
+</br>
+<div align="center">Link Website : https://literacybridge.my.id/ </br>
+Video DEMO : https://drive.google.com/file/d/1uZstyMMHA1KYUSysx2v5QkRZb-HVVAUn/view?usp=sharing</div>
 <br/>
 <br/>
 <br/>
 
 ### Team : **Dari Hati Mencari Solusi** ❤️
 
-**We are LiteracyBridge**
+**We are LiteracyBridge** 
 
 <table>
   <tr>
@@ -72,5 +74,3 @@ php artisan serve
 Run your laravel ip in web browser
 
 **127.0.0.1:8000** 
-Link Website : https://literacybridge.my.id/ </br>
-Video DEMO : https://drive.google.com/file/d/1uZstyMMHA1KYUSysx2v5QkRZb-HVVAUn/view?usp=sharing
