@@ -23,9 +23,14 @@
                 </svg>
                 <select id="category" name="category" class="w-full h-12 pl-8 pr-8 bg-white-100 rounded-l-lg focus:outline-none focus:border-none focus:ring-0 outline-none border-none appearance-none">
                   <option class="text-neutral-800" selected>Kategori</option>
-                  <option>Category 1</option>
-                  <option>Category 2</option>
-                </select>                
+                  <option>Literasi</option>
+                  <option>Romantis</option>
+                  <option>Sains</option>
+                  <option>Cerita</option>
+                  <option>fantasi</option>
+                  <option>Sejarah</option>
+                  <option>Budaya</option>
+                </select>
               </div>
               <input type="text" class="w-3/5 h-12 pl-4 bg-white-100 border-neutral-400 focus:outline-none focus:border-y-0 focus:ring-0 border-y-0 border-l border-r font-normal" placeholder="Cari buku berdasarkan..">
               <button class="w-1/5 h-12 flex items-center justify-center ml-4 rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] text-white font-medium transition-all duration-300 ease-in-out shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#39ADF8]" style="color: white !important">
@@ -41,17 +46,17 @@
     </div>
   </div>
 </section>
-    
+
     <section class="container mx-auto px-6 xl:px-24 py-14">
       <div class="gap-x-11 md:flex ">
-        
+
         <div id="filterContainer" class="hidden lg:block w-1/4 space-y-4 transition-all duration-500 ease-out">
           <div class="flex justify-between border-b transition-all duration-300 border-neutral-500 py-2 px-3">
             <div id="filterChild" class="transition-all duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 pr-2 text-neutral-800 inline-block" viewBox="0 0 24 24">
                 <path fill="none" stroke="#525658" stroke-linecap="round" stroke-width="2"
                   d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z" />
-              </svg>            
+              </svg>
               <span>Filternya</span>
             </div>
             <div id="btnHiddenFilter">
@@ -59,7 +64,7 @@
               <svg id="rightArrowIcon" class="hidden w-8 h-8 transition-all cursor-pointer hover:scale-105" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m45.66-93.66a8 8 0 0 1 0 11.32l-32 32a8 8 0 0 1-11.32-11.32L148.69 136H88a8 8 0 0 1 0-16h60.69l-18.35-18.34a8 8 0 0 1 11.32-11.32Z"/></svg>
             </div>
           </div>
-  
+
           <ul class="pb-8 overflow-y-auto overflow-x-hidden h-[450px] pt-1">
             <li class="py-2 px-2 rounded-md hover:bg-slate-300">
               <a href="#" class="flex  space-x-4">
@@ -159,13 +164,13 @@
             </li>
           </ul>
         </div>
-  
+
         {{-- buku flex --}}
         <div class="w-full">
           <div class="md:flex gap-8 justify-between">
             <div class="flex items-end">
               <h5 class="text-neutral-800">
-                Menampilkan hasil untuk 
+                Menampilkan hasil untuk
                 <b class="font-semibold text-black-500">{{ $query }}</b>
               </h5>
             </div>
@@ -184,10 +189,12 @@
                     <option class="px-3 text-xs" selected>
                       Populer
                     </option>
-                    <option class="px-3 text-xs">Category 1</option>
-                    <option class="px-3 text-xs">Category 2</option>
-                  </select>                  
-                </div>            
+                    <option class="px-3 text-xs">Romantis</option>
+                    <option class="px-3 text-xs">Fantasi</option>
+                    <option class="px-3 text-xs">Sains</option>
+                    <option class="px-3 text-xs">Cerita</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -211,7 +218,7 @@
         </div>
       </div>
     </section>
-    
+
     <section>
       <div id="filter-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -329,12 +336,12 @@
                       </a>
                     </li>
                   </ul>
-                </div>       
+                </div>
             </div>
         </div>
     </div>
     </section>
-  
+
     {{-- Banyak Dikoleksi --}}
     <section class="container mx-auto px-6 xl:px-24 py-8">
       <div class="max-w-screen-lg mx-auto space-y-6">
@@ -353,7 +360,7 @@
                   <div
                     class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                     <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                    <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                   </div>
                 </div>
               </a>
@@ -394,7 +401,7 @@
                   <div
                     class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                     <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                    <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                   </div>
                 </div>
               </a>
@@ -435,7 +442,7 @@
                   <div
                     class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                     <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                    <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                   </div>
                 </div>
               </a>
@@ -476,7 +483,7 @@
                   <div
                     class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                     <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                    <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                   </div>
                 </div>
               </a>
@@ -509,7 +516,7 @@
               </div>
             </li>
           </ul>
-  
+
           <!-- Gambar animasi -->
           <div class="hidden md:flex w-3/12 items-center">
             <img src="{{ asset('images/animasi.webp') }}" alt="">
@@ -517,29 +524,29 @@
         </div>
       </div>
     </section>
-  
+
 @endsection
 
 @section("js-custom")
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script>    
+  <script>
     $("#btnHiddenFilter").on("click", function () {
       const $filtContainer = $("#filterContainer");
       const $filtChild = $("#filterChild");
       const $leftArrowIcon = $("#leftArrowIcon");
       const $rightArrowIcon = $("#rightArrowIcon");
-      
+
       if ($filtContainer.hasClass('w-1/4')) {
-        $filtChild.toggleClass("hidden");      
-        $filtContainer.removeClass('w-1/4').addClass('w-[4%]');        
+        $filtChild.toggleClass("hidden");
+        $filtContainer.removeClass('w-1/4').addClass('w-[4%]');
 
         $leftArrowIcon.toggleClass("hidden");
         $rightArrowIcon.toggleClass("hidden");
       } else if ($filtContainer.hasClass('w-[4%]')) {
-        
+
         setTimeout(() => {
-          $filtChild.toggleClass("hidden");   
-          $rightArrowIcon.toggleClass("hidden");   
+          $filtChild.toggleClass("hidden");
+          $rightArrowIcon.toggleClass("hidden");
           $leftArrowIcon.toggleClass("hidden");
         }, 490);
         $filtContainer.removeClass('w-[4%]').addClass('w-1/4');
