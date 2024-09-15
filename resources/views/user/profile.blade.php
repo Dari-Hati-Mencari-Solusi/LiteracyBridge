@@ -15,7 +15,7 @@
         </div>
         <div class="py-5 px-5">
           <h5 class="text-black-400 font-bold">{{ $user->name }}</h5>
-          <h6 class="text-neutral-700">{{ $user->username }}</h6>          
+          <h6 class="text-neutral-700">{{ $user->username }}</h6>
           <h6 class="text-black-400">Bergabung {{ \Carbon\Carbon::parse("$user->created_at")->translatedFormat('F Y') }}</h6>
           <h6 class="text-[#129DF7] font-bold">Bookworms</h6>
           <img src="{{ asset('images/rangking.webp') }}" alt="ranking profile" class="w-[35px] h-[45px]">
@@ -136,14 +136,14 @@
 
       <div class="border-2 border-primary-200 rounded-xl p-5 space-y-2">
         <div class="flex flex-wrap overflow-x-auto gap-x-6 gap-y-3">
-          <a href="#"><img src="{{ asset('images/rangking.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/rankunlock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
         </div>
       </div>
     </div>
