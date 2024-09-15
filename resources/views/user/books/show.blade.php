@@ -348,7 +348,7 @@
               </button>
             </div>
           </div>
-          <div class="md:flex justify-between py-4">
+          <div class="md:flex justify-between py-4 flex">
             <caption class="text-color-400">2 jam yang lalu</caption>
             <div class="flex items-center space-x-2">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 14 14">
@@ -366,7 +366,7 @@
               </a>
             </div>
           </div>
-          <div class="md:flex items-center group">
+          <div class="md:flex items-center group flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110"
               viewBox="0 0 16 16">
               <path fill="#84CCFA"
@@ -393,7 +393,7 @@
                     </div>
                     <div class="mt-4 max-h-80 overflow-y-auto space-y-3">
                       <!-- Item 1 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -433,7 +433,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -459,7 +459,7 @@
                       </div>
 
                       <!-- Item 2 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -499,7 +499,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -538,7 +538,7 @@
         </div>
       </div>
 
-      <div class="space-y-4 border-b-2 py-3">
+      <div class="space-y-4 border-b-2 py-3 p-3">
         <div class="flex items-center space-x-3">
           <a href=""
             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -576,7 +576,7 @@
               </button>
             </div>
           </div>
-          <div class="md:flex justify-between py-4">
+          <div class="md:flex justify-between py-4 flex">
             <caption class="text-color-400">2 jam yang lalu</caption>
             <div class="flex items-center space-x-2">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 14 14">
@@ -594,7 +594,7 @@
               </a>
             </div>
           </div>
-          <div class="md:flex items-center group">
+          <div class="md:flex items-center group flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110"
               viewBox="0 0 16 16">
               <path fill="#84CCFA"
@@ -621,7 +621,7 @@
                     </div>
                     <div class="mt-4 max-h-80 overflow-y-auto space-y-3">
                       <!-- Item 1 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -661,7 +661,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -687,7 +687,7 @@
                       </div>
 
                       <!-- Item 2 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -727,7 +727,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
