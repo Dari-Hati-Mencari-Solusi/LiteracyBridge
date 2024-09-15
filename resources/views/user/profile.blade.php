@@ -67,7 +67,7 @@
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca1.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>
@@ -75,22 +75,22 @@
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca2.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca3.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca4.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-sangkuriang.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>
@@ -105,27 +105,27 @@
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-geochemical.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-literasi-sebagai-praktik-sosial.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-sejenak-hening.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-merengkuh-kebahagiaan.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca3.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>

@@ -141,7 +141,7 @@
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
               <img src="{{ asset ('images/cover-sangkuriang.jpg') }}" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px] ">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
@@ -432,9 +432,9 @@
         <!-- 4 Image -->
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
-            <div class="relative overflow-hidden rounded-xl">
+            <div class="h-full relative overflow-hidden rounded-xl sm:h-[366px] w-full">
               <img src="{{ asset ('./images/cover-sangkuriang.jpg') }}" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
+                class="rounded-xl object-cover transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
