@@ -15,7 +15,7 @@
         </div>
         <div class="flex justify-center md:justify-start">
           <button
-            class="btn-blue rounded-full px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white "
+            class="btn-blue rounded-full px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white"
             style="color:white !important">Mulai Membaca</button>
         </div>
       </div>
@@ -152,7 +152,7 @@
         </h6>
         <div class="md:flex justify-center pt-2">
           <button
-            class="md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
+            class="btn-blue-outline md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8]">
             Mulai Membaca
           </button>
         </div>
