@@ -16,6 +16,10 @@
     font-family: "Poppins", sans-serif;
   }
 
+  .my-container {
+    @apply mx-auto container px-6 xl:px-24;
+  }
+
   /* Untuk seluruh elemen scrollbar */
   ::-webkit-scrollbar {
     width: 12px; /* Lebar scrollbar */
@@ -46,3 +50,20 @@
   }
 }
 
+@layer components {
+  .btn-blue {
+    @apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  }
+  .btn-blue:hover {
+    background-position: right center;
+  }          
+ 
+  .btn-blue-outline {
+    @apply border-2 border-neutral-500 bg-white-100 text-primary-500 hover:text-white-100 hover:border-white-100 transition duration-500 shadow-sm;
+  }
+  .btn-blue-outline:hover {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  }
+}
