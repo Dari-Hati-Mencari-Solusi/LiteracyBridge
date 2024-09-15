@@ -17,15 +17,16 @@
         </div>
         <div class="md:flex justify-center">
           <button
-            id="btnGo"
-            class="md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[120px] py-3 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] ml-4"
-            style="color:white !important">Ayo Mulai</button>
+          id="btnGo"
+          class="btn-blue text-center rounded-full px-28 sm:px-32 py-3 text-lg font-semibold leading-6 mx-6 sm:ml-4">
+          Ayo Mulai
+        </button>
         </div>
         <div class="md:flex justify-center">
           <a href="{{ route("login") }}"
-            class="transition duration-300 md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
-            Saya Sudah Memiliki Akun
-          </a>
+          class="btn-blue-outline inline-block text-center rounded-full px-10 py-3 text-lg font-semibold leading-6 mx-6 sm:ml-4">
+          Saya Sudah Memiliki Akun
+        </a>
         </div>
       </div>
     </div>

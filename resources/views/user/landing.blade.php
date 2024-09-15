@@ -15,7 +15,7 @@
         </div>
         <div class="flex justify-center md:justify-start">
           <button
-            class="rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]"
+            class="btn-blue rounded-full px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white "
             style="color:white !important">Mulai Membaca</button>
         </div>
       </div>
@@ -26,8 +26,6 @@
       </div>
     </div>
   </section>
-
-
 
   {{-- content 1 --}}
   <section class="md:px-[160px] px-8">
