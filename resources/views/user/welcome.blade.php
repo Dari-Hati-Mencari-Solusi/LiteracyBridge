@@ -221,42 +221,6 @@
       </div>
     </div>
   </section>
-
-  {{-- <section class="md:px-[160px] py-12 mt-10">
-    <div class="max-w-screen-lg mx-auto space-y-10">
-      <div class="font-medium text-[24px] text-center md:text-start">
-        <h3>Papan Peringkat</h3>
-      </div>
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank1.png') }}" alt="gambar rank 1" class="rounded-xl object-cover" style="width:164px; height:237px;">
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank2.png') }}" alt="gambar rank 2" class="rounded-xl object-cover" style="width:160px; height:237px;">
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank3.png') }}" alt="gambar rank 3" class="rounded-xl object-cover" style="width:200px; height:237px;" >
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank4.png') }}" alt="gambar rank 4" class="rounded-xl object-cover" style="width:170px; height:237px;" >
-        </div>
-      </div>
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank5.png') }}" alt="gambar rank 5" class="rounded-xl object-cover" style="width:164px; height:237px;" >
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank6.png')}}" alt="gambar rank 6" class="rounded-xl object-cover" style="width:160px; height:237px;" >
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank7.png') }}" alt="gambar rank 7" class="rounded-xl object-cover" style="width:170px; height:233px;" >
-        </div>
-        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
-          <img src="{{ asset ('./images/rank8.png') }}" alt="gambar rank 8" class="rounded-xl object-cover" style="width:170px; height:237px;" >
-        </div>
-      </div>
-    </div>
-  </section> --}}
 @endsection
 @section("js-custom")
   <script>

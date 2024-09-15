@@ -48,13 +48,12 @@
                 <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
               </div>
             </a>
-          </li>             
+          </li>
         @endforeach
       </ul>
     </div>
   </section>
 
-  {{-- Pesan Literasi Untuk Siswa --}}
   {{-- Pesan Literasi Untuk Siswa --}}
   <section class="py-12 md:py-16">
     <div class="relative bg-gradient-to-t from-[#39ADF8] to-[#84CCFA] py-8 md:py-16 flex justify-center">
@@ -125,28 +124,28 @@
     <div class="max-w-screen-lg mx-auto space-y-10">
       <div class="grid grid-cols-4 md:grid-cols-8 gap-12 px-6 md:px-0">
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/rankUnlock.webp') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/rankunlock.png') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
       </div>
       <div class="text-center">
@@ -175,7 +174,7 @@
             <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank">
               <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base">{{ $video->title }}</h6>
+              <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
               <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
             </a>
           </li>
