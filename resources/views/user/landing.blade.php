@@ -168,14 +168,19 @@
       </div>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
         @foreach ($videos as $video)
-          <li class="flex flex-col items-center md:items-start">
-            <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank">
+        <li class="flex flex-col items-center md:items-start">
+          <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank" class="block overflow-hidden rounded-xl max-w-full">
+            <!-- Atur tinggi gambar menjadi lebih kecil dengan h-40 -->
+            <div class="relative overflow-hidden rounded-xl h-40 sm:h-52">
               <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
+                class="h-full w-full object-cover object-top transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <div class="flex flex-col justify-between mt-2">
+              <h6 class="text-sm font-medium line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
               <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
-            </a>
-          </li>
+            </div>
+          </a>
+        </li>
         @endforeach
       </ul>
     </div>

@@ -161,7 +161,7 @@
                 class="h-full w-full object-cover object-top transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
             <div class="flex flex-col justify-between mt-2">
-              <h6 class="text-sm font-medium line-clamp-2 sm:text-base">{{ $video->title }}</h6>
+              <h6 class="text-sm font-medium line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
               <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
             </div>
           </a>
