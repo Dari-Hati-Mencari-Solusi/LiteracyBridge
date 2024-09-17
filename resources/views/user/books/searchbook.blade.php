@@ -23,12 +23,17 @@
                 </svg>
                 <select id="category" name="category" class="w-full h-12 pl-8 pr-8 bg-white-100 rounded-l-lg focus:outline-none focus:border-none focus:ring-0 outline-none border-none appearance-none">
                   <option class="text-neutral-800" selected>Kategori</option>
-                  <option>Category 1</option>
-                  <option>Category 2</option>
-                </select>                
+                  <option>Literasi</option>
+                  <option>Romantis</option>
+                  <option>Sains</option>
+                  <option>Cerita</option>
+                  <option>fantasi</option>
+                  <option>Sejarah</option>
+                  <option>Budaya</option>
+                </select>
               </div>
               <input type="text" class="w-3/5 h-12 pl-4 bg-white-100 border-neutral-400 focus:outline-none focus:border-y-0 focus:ring-0 border-y-0 border-l border-r font-normal" placeholder="Cari buku berdasarkan..">
-              <button class="w-1/5 h-12 flex items-center justify-center ml-4 rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] text-white font-medium transition-all duration-300 ease-in-out shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#39ADF8]" style="color: white !important">
+              <button class="btn-blue w-1/5 h-12 flex items-center justify-center ml-4 rounded-full text-white font-medium transition-all duration-300 ease-in-out shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-0 md:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
@@ -41,17 +46,17 @@
     </div>
   </div>
 </section>
-    
+
     <section class="container mx-auto px-6 xl:px-24 py-14">
       <div class="gap-x-11 md:flex ">
-        
+
         <div id="filterContainer" class="hidden lg:block w-1/4 space-y-4 transition-all duration-500 ease-out">
           <div class="flex justify-between border-b transition-all duration-300 border-neutral-500 py-2 px-3">
             <div id="filterChild" class="transition-all duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 pr-2 text-neutral-800 inline-block" viewBox="0 0 24 24">
                 <path fill="none" stroke="#525658" stroke-linecap="round" stroke-width="2"
                   d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z" />
-              </svg>            
+              </svg>
               <span>Filternya</span>
             </div>
             <div id="btnHiddenFilter">
@@ -59,7 +64,7 @@
               <svg id="rightArrowIcon" class="hidden w-8 h-8 transition-all cursor-pointer hover:scale-105" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m45.66-93.66a8 8 0 0 1 0 11.32l-32 32a8 8 0 0 1-11.32-11.32L148.69 136H88a8 8 0 0 1 0-16h60.69l-18.35-18.34a8 8 0 0 1 11.32-11.32Z"/></svg>
             </div>
           </div>
-  
+
           <ul class="pb-8 overflow-y-auto overflow-x-hidden h-[450px] pt-1">
             <li class="py-2 px-2 rounded-md hover:bg-slate-300">
               <a href="#" class="flex  space-x-4">
@@ -159,13 +164,13 @@
             </li>
           </ul>
         </div>
-  
+
         {{-- buku flex --}}
         <div class="w-full">
           <div class="md:flex gap-8 justify-between">
             <div class="flex items-end">
               <h5 class="text-neutral-800">
-                Menampilkan hasil untuk 
+                Menampilkan hasil untuk
                 <b class="font-semibold text-black-500">{{ $query }}</b>
               </h5>
             </div>
@@ -184,10 +189,12 @@
                     <option class="px-3 text-xs" selected>
                       Populer
                     </option>
-                    <option class="px-3 text-xs">Category 1</option>
-                    <option class="px-3 text-xs">Category 2</option>
-                  </select>                  
-                </div>            
+                    <option class="px-3 text-xs">Romantis</option>
+                    <option class="px-3 text-xs">Fantasi</option>
+                    <option class="px-3 text-xs">Sains</option>
+                    <option class="px-3 text-xs">Cerita</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -211,7 +218,7 @@
         </div>
       </div>
     </section>
-    
+
     <section>
       <div id="filter-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -329,217 +336,218 @@
                       </a>
                     </li>
                   </ul>
-                </div>       
+                </div>
             </div>
         </div>
     </div>
     </section>
-  
+
     {{-- Banyak Dikoleksi --}}
     <section class="container mx-auto px-6 xl:px-24 py-8">
       <div class="max-w-screen-lg mx-auto space-y-6">
         <div class="font-medium text-[24px] text-center md:text-start">
           <h3>Banyak Dikoleksi</h3>
         </div>
-        <div class="md:flex">
-          <!-- Konten Grid -->
-          <ul class="w-full md:w-9/12 grid grid-cols-1 md:grid-cols-2 gap-3">
-            <li class="flex items-start mt-2 mb-4">
-              <a href="#" class="block overflow-hidden rounded-xl mr-4">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-              </a>
-              <div class="space-y-3">
-                <h6 class="text-h6">Judul Buku</h6>
-                <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
-                <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
-                  deskripsi lah dan tidak bisa...</h6>
-                <div class="flex space-x-4 py-2">
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
-                          d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
+         <div class="md:flex">
+        <!-- Konten Grid -->
+        <div class="w-full md:w-9/12 grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="flex items-start mt-2 mb-4">
+            <a href="#" class="block overflow-hidden rounded-xl mr-4">
+              <div class="relative overflow-hidden rounded-xl">
+                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                  class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+                <!-- Badge -->
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
+                  <span class="text-white-100 text-title1 font-medium">5</span>
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
-            </li>
-            <li class="flex items-start mt-2 mb-4">
-              <a href="#" class="block overflow-hidden rounded-xl mr-4">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
+            </a>
+            <div class="space-y-3">
+              <h6 class="text-h6">Judul Buku</h6>
+              <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
+              <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
+                deskripsi lah dan tidak bisa...</h6>
+              <div class="flex space-x-4 py-2">
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
                 </div>
-              </a>
-              <div class="space-y-3">
-                <h6 class="text-h6">Judul Buku</h6>
-                <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
-                <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
-                  deskripsi lah dan tidak bisa...</h6>
-                <div class="flex space-x-4 py-2">
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
-                          d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
+                        d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
                 </div>
               </div>
-            </li>
-            <li class="flex items-start mt-2 mb-4">
-              <a href="#" class="block overflow-hidden rounded-xl mr-4">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
-                </div>
-              </a>
-              <div class="space-y-3">
-                <h6 class="text-h6">Judul Buku</h6>
-                <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
-                <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
-                  deskripsi lah dan tidak bisa...</h6>
-                <div class="flex space-x-4 py-2">
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
-                          d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
+            </div>
+          </div>
+
+          <div class="flex items-start mt-2 mb-4">
+            <a href="#" class="block overflow-hidden rounded-xl mr-4">
+              <div class="relative overflow-hidden rounded-xl">
+                <img src="{{ asset('images/literasimembaca2.webp') }}" alt=""
+                  class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+                <!-- Badge -->
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
+                  <span class="text-white-100 text-title1 font-medium">5</span>
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
-            </li>
-            <li class="flex items-start mt-2 mb-4">
-              <a href="#" class="block overflow-hidden rounded-xl mr-4">
-                <div class="relative overflow-hidden rounded-xl">
-                  <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
-                    class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                  <!-- Badge -->
-                  <div
-                    class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
-                    <span class="text-white-100 text-title1 font-medium">5</span>
-                    <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
-                  </div>
+            </a>
+            <div class="space-y-3">
+              <h6 class="text-h6">Judul Buku</h6>
+              <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
+              <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
+                deskripsi lah dan tidak bisa...</h6>
+              <div class="flex space-x-4 py-2">
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
                 </div>
-              </a>
-              <div class="space-y-3">
-                <h6 class="text-h6">Judul Buku</h6>
-                <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
-                <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
-                  deskripsi lah dan tidak bisa...</h6>
-                <div class="flex space-x-4 py-2">
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
-                  <div class="flex items-center">
-                    <a href="#">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
-                        <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
-                          d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
-                      </svg>
-                    </a>
-                    <span class="ml-1">115</span>
-                  </div>
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
+                        d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
                 </div>
               </div>
-            </li>
-          </ul>
-  
-          <!-- Gambar animasi -->
-          <div class="hidden md:flex w-3/12 items-center">
-            <img src="{{ asset('images/animasi.webp') }}" alt="">
+            </div>
+          </div>
+          <div class="flex items-start mt-2 mb-4">
+            <a href="#" class="block overflow-hidden rounded-xl mr-4">
+              <div class="relative overflow-hidden rounded-xl">
+                <img src="{{ asset('images/literasimembaca3.webp') }}" alt=""
+                  class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+                <!-- Badge -->
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
+                  <span class="text-white-100 text-title1 font-medium">5</span>
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                </div>
+              </div>
+            </a>
+            <div class="space-y-3">
+              <h6 class="text-h6">Judul Buku</h6>
+              <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
+              <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
+                deskripsi lah dan tidak bisa...</h6>
+              <div class="flex space-x-4 py-2">
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
+                </div>
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
+                        d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start mt-2 mb-4">
+            <a href="#" class="block overflow-hidden rounded-xl mr-4">
+              <div class="relative overflow-hidden rounded-xl">
+                <img src="{{ asset('images/literasimembaca4.webp') }}" alt=""
+                  class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+                <!-- Badge -->
+                <div
+                  class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
+                  <span class="text-white-100 text-title1 font-medium">5</span>
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                </div>
+              </div>
+            </a>
+            <div class="space-y-3">
+              <h6 class="text-h6">Judul Buku</h6>
+              <h6 class="text-caption text-primary-800">Author Jhon Doe</h6>
+              <h6 class="block text-title2 text-black-400 font-normal">Ini adalah contoh deskripsi pokoknya apapun
+                deskripsi lah dan tidak bisa...</h6>
+              <div class="flex space-x-4 py-2">
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-5.918-3.805a2 2 0 0 0-2.164 0z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
+                </div>
+                <div class="flex items-center">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24">
+                      <path fill="none" stroke="black" stroke-linejoin="round" stroke-width="1.5"
+                        d="M22 8.862a5.95 5.95 0 0 1-1.654 4.13c-2.441 2.531-4.809 5.17-7.34 7.608c-.581.55-1.502.53-2.057-.045l-7.295-7.562c-2.205-2.286-2.205-5.976 0-8.261a5.58 5.58 0 0 1 8.08 0l.266.274l.265-.274A5.6 5.6 0 0 1 16.305 3c1.52 0 2.973.624 4.04 1.732A5.95 5.95 0 0 1 22 8.862Z" />
+                    </svg>
+                  </a>
+                  <span class="ml-1">115</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Gambar animasi -->
+        <div class="hidden md:flex w-3/12 items-center">
+          <img src="{{ asset('images/animasi.webp') }}" alt="">
+        </div>
+      </div>
       </div>
     </section>
-  
+
 @endsection
 
 @section("js-custom")
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script>    
+  <script>
     $("#btnHiddenFilter").on("click", function () {
       const $filtContainer = $("#filterContainer");
       const $filtChild = $("#filterChild");
       const $leftArrowIcon = $("#leftArrowIcon");
       const $rightArrowIcon = $("#rightArrowIcon");
-      
+
       if ($filtContainer.hasClass('w-1/4')) {
-        $filtChild.toggleClass("hidden");      
-        $filtContainer.removeClass('w-1/4').addClass('w-[4%]');        
+        $filtChild.toggleClass("hidden");
+        $filtContainer.removeClass('w-1/4').addClass('w-[4%]');
 
         $leftArrowIcon.toggleClass("hidden");
         $rightArrowIcon.toggleClass("hidden");
       } else if ($filtContainer.hasClass('w-[4%]')) {
-        
+
         setTimeout(() => {
-          $filtChild.toggleClass("hidden");   
-          $rightArrowIcon.toggleClass("hidden");   
+          $filtChild.toggleClass("hidden");
+          $rightArrowIcon.toggleClass("hidden");
           $leftArrowIcon.toggleClass("hidden");
         }, 490);
         $filtContainer.removeClass('w-[4%]').addClass('w-1/4');

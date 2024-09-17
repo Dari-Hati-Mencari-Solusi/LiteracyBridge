@@ -50,7 +50,7 @@
                 <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
               </div>
             </a>
-          </li>             
+          </li>
         @endforeach
       </ul>
     </div>
@@ -64,10 +64,10 @@
           buku-buku pilihan untuk membaca, memahami, dan berkembang. Tingkatkan literasi Anda dan raih potensi penuh
           melalui pengetahuan yang didapatkan.</h6>
       </div>
-      <div class="w-full md:w-auto flex mb-4 md:mb-0">
-        {{-- <img src="./images/animasi.webp" alt="" class="w-[260px] md:w-[290px]"> --}}
+      <div class="w-full md:w-auto flex mb-4 md:mb-0 left-4">
+        <img src="./images/animasi.webp" alt="" class="w-[260px] md:w-[290px]">
         {{-- <iframe class="md:w-[290px] w-full h-[460px]" src="https://lottie.host/embed/427f1e0d-d710-4ea7-92f7-724d9f3d42ae/kmOLCRQB1d.json"></iframe> --}}
-      <dotlottie-player class="" src="https://lottie.host/427f1e0d-d710-4ea7-92f7-724d9f3d42ae/kmOLCRQB1d.json" background="transparent" speed="1" style="" loop autoplay resizeMode='right'></dotlottie-player>
+      {{-- <dotlottie-player class="" src="https://lottie.host/427f1e0d-d710-4ea7-92f7-724d9f3d42ae/kmOLCRQB1d.json" background="transparent" speed="1" style="" loop autoplay resizeMode='right'></dotlottie-player> --}}
       </div>
     </div>
   </section>
@@ -144,14 +144,30 @@
       </div>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
         @foreach ($videos as $video)
-          <li class="flex flex-col items-center md:items-start">
+        <li class="flex flex-col items-center md:items-start">
+          <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank" class="block overflow-hidden rounded-xl max-w-full">
+            <!-- Atur tinggi gambar menjadi lebih kecil dengan h-40 -->
+            <div class="relative overflow-hidden rounded-xl h-40 sm:h-52">
+              <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
+                class="h-full w-full object-cover object-top transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <div class="flex flex-col justify-between mt-2">
+              <h6 class="text-sm font-medium line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
+              <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
+            </div>
+          </a>
+        </li>
+
+
+          {{-- <li class="flex flex-col items-center md:items-start">
             <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank">
               <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
+
               <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base">{{ $video->title }}</h6>
               <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
             </a>
-          </li>          
+          </li> --}}
         @endforeach
       </ul>
     </div>
@@ -162,32 +178,36 @@
       <div class="font-medium text-[24px] text-center md:text-start">
         <h3>Papan Peringkat</h3>
       </div>
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
-        <div class="flex justify-center items-center">
-          <img src="./images/rank1.webp" alt="gambar rank 1" class="rounded-xl object-cover">
+
+      <!-- Bagian gambar 1-4 -->
+      <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 px-4 md:px-0">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank1.png') }}" alt="gambar rank 1" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank2.webp" alt="gambar rank 2" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank2.png') }}" alt="gambar rank 2" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank3.webp" alt="gambar rank 3" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank3.png') }}" alt="gambar rank 3" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank4.webp" alt="gambar rank 4" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank4.png') }}" alt="gambar rank 4" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
       </div>
-      <div class="grid grid-cols-4 md:grid-cols-4 gap-6 px-6 md:px-0">
-        <div class="flex justify-center items-center">
-          <img src="./images/rank5.webp" alt="gambar rank 1" class="rounded-xl object-cover">
+
+      <!-- Bagian gambar 5-8 -->
+      <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 px-4 md:px-0">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank5.png') }}" alt="gambar rank 5" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank6.webp" alt="gambar rank 2" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank6.png')}}" alt="gambar rank 6" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank7.webp" alt="gambar rank 3" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank7.png') }}" alt="gambar rank 7" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
-        <div class="flex justify-center items-center">
-          <img src="./images/rank8.webp" alt="gambar rank 4" class="rounded-xl object-cover">
+        <div class="flex justify-center items-center transform transition hover:animate-rotate-back-and-forth">
+          <img src="{{ asset ('./images/rank8.png') }}" alt="gambar rank 8" class="rounded-xl object-cover w-full md:w-[160px] md:h-[180px]" style="height: auto;">
         </div>
       </div>
     </div>
@@ -195,6 +215,6 @@
 @endsection
 @section("js-custom")
   <script>
-    
+
   </script>
 @endsection

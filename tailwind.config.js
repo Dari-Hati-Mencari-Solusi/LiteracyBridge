@@ -71,7 +71,7 @@ module.exports = {
           800: "#666666",
           900: "#333333",
         },
-        
+
       },
       fontSize: {
         h1: "48px",
@@ -83,7 +83,22 @@ module.exports = {
         title1: "16px",
         title2: "13px",
         caption: "11px",
+      },
+
+      // animation rotate rightleft start
+      // add in class hover:animate-rotate-back-and-forth
+      animation: {
+        'rotate-back-and-forth': 'rotate-back-and-forth 0.8s ease-in-out infinite',
+      },
+      keyframes: {
+        'rotate-back-and-forth': {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(10deg)' },
+          '75%': { transform: 'rotate(-10deg)' },
+        }
       }
+      // animation rotate rightleft end
+
     },
   },
   plugins: [

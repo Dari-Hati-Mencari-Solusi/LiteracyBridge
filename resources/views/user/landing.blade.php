@@ -15,7 +15,7 @@
         </div>
         <div class="flex justify-center md:justify-start">
           <button
-            class="rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]"
+            class="btn-blue rounded-full px-[60px] md:px-[120px] py-3 text-base md:text-lg font-semibold leading-6 text-white"
             style="color:white !important">Mulai Membaca</button>
         </div>
       </div>
@@ -26,8 +26,6 @@
       </div>
     </div>
   </section>
-
-
 
   {{-- content 1 --}}
   <section class="md:px-[160px] px-8">
@@ -48,13 +46,12 @@
                 <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
               </div>
             </a>
-          </li>             
+          </li>
         @endforeach
       </ul>
     </div>
   </section>
 
-  {{-- Pesan Literasi Untuk Siswa --}}
   {{-- Pesan Literasi Untuk Siswa --}}
   <section class="py-12 md:py-16">
     <div class="relative bg-gradient-to-t from-[#39ADF8] to-[#84CCFA] py-8 md:py-16 flex justify-center">
@@ -125,28 +122,28 @@
     <div class="max-w-screen-lg mx-auto space-y-10">
       <div class="grid grid-cols-4 md:grid-cols-8 gap-12 px-6 md:px-0">
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/rankUnlock.webp') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/rankunlock.png') }}" alt="gambar rank unlock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
         <div class="flex justify-center items-center">
-          <img src="{{ asset('./images/ranklock.webp') }}" alt="gambar lock" class="rounded-xl object-cover">
+          <img src="{{ asset('./images/ranklock.png') }}" alt="gambar lock" class="rounded-xl object-cover">
         </div>
       </div>
       <div class="text-center">
@@ -155,7 +152,7 @@
         </h6>
         <div class="md:flex justify-center pt-2">
           <button
-            class="md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8] shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ml-4 hover:text-white-100">
+            class="btn-blue-outline md:flex justify-center rounded-full border-[1.5px] border-neutral-500 bg-transparent px-[55px] py-3 text-lg font-semibold leading-6 text-[#39ADF8]">
             Mulai Membaca
           </button>
         </div>
@@ -171,14 +168,19 @@
       </div>
       <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
         @foreach ($videos as $video)
-          <li class="flex flex-col items-center md:items-start">
-            <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank">
+        <li class="flex flex-col items-center md:items-start">
+          <a href="https://www.youtube.com/watch?v={{ $video->youtube_link }}" target="_blank" class="block overflow-hidden rounded-xl max-w-full">
+            <!-- Atur tinggi gambar menjadi lebih kecil dengan h-40 -->
+            <div class="relative overflow-hidden rounded-xl h-40 sm:h-52">
               <img src="https://img.youtube.com/vi/{{ $video->youtube_link }}/hqdefault.jpg" alt="Youtube thumbnail"
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <h6 class="text-sm mb-2 font-medium pt-3 line-clamp-2 sm:text-base">{{ $video->title }}</h6>
+                class="h-full w-full object-cover object-top transform transition-transform duration-300 ease-in-out hover:scale-110">
+            </div>
+            <div class="flex flex-col justify-between mt-2">
+              <h6 class="text-sm font-medium line-clamp-2 sm:text-base hover:underline">{{ $video->title }}</h6>
               <p class="text-xs font-light sm:text-sm">Creator {{ $video->creator }}</p>
-            </a>
-          </li>
+            </div>
+          </a>
+        </li>
         @endforeach
       </ul>
     </div>

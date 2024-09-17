@@ -22,7 +22,7 @@
       <div class="relative max-w-md hidden md:block">
         <form action="{{ route("books.search") }}" method="GET" class="relative w-full">
           @csrf
-          <input 
+          <input
             name="s"
             type="search"
             class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />

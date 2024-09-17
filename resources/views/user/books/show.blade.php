@@ -38,7 +38,7 @@
                 </div>
                 <div class="flex items-center space-x-1">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24">
-                    <path fill="#E98B8B" fill-rule="evenodd"
+                    <path fill="#ff2929" fill-rule="evenodd"
                       d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z" />
                   </svg>
                   <span class="text-title1 text-black-900 font-medium px-1">{{ $book->like }}</span>
@@ -55,23 +55,23 @@
             <div class="space-y-3 md:pt-16">
               <div class="flex flex-col md:flex-row md:space-x-2 space-y-3 md:space-y-0">
                 <a href="{{ route('books.read', $book->slug) }}"
-                  class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">
+                  class="btn-blue w-full md:w-auto rounded-full px-8 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm text-center">
                   Baca
                 </a>
 
                 <button
-                  class="w-full md:w-auto rounded-full bg-gradient-to-r flex justify-center pr-5 items-center gap-2 from-[#39ADF8] to-[#84CCFA] px-3 py-2 text-sm md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] text-white-100">
+                  class="btn-blue w-full md:w-auto rounded-full flex justify-center pr-5 items-center gap-2 px-3 py-2 text-sm md:text-lg font-medium leading-6 text-white shadow-sm">
                   <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="md:w-7 md:h-7 w-5 h-5"
                       viewBox="0 0 512 512">
                       <path fill="#ffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
                         d="M352 48H160a48 48 0 0 0-48 48v368l144-128l144 128V96a48 48 0 0 0-48-48" />
                     </svg></a>
-                  Suka buku ini
+                  Baca nanti
                 </button>
               </div>
               <div>
                 <button
-                  class="w-full rounded-full md:w-auto bg-gradient-to-r flex justify-center pr-4 items-center gap-2 from-[#E98B8B] to-[#D77C7C] px-3 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l text-white-100 hover:from-[#E98B8B] hover:to-[#D77C7C]">
+                  class="btn-red w-full rounded-full md:w-auto flex justify-center pr-4 items-center gap-2 px-3 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm">
                   <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24">
                       <path fill="#ffff" fill-rule="evenodd"
@@ -134,13 +134,13 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca1.webp') }}" alt="cover"
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
                   class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                   <span class="text-white-100 text-title1 font-medium">5</span>
-                  <img src="{{ asset("images/point-fix.webp") }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
             </a>
@@ -176,13 +176,13 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca2.webp') }}" alt="cover"
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
                   class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                   <span class="text-white-100 text-title1 font-medium">5</span>
-                  <img src="{{ asset("images/point.webp") }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
             </a>
@@ -217,13 +217,13 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca3.webp') }}" alt="cover"
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
                   class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                   <span class="text-white-100 text-title1 font-medium">5</span>
-                  <img src="{{ asset("images/point.webp") }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
             </a>
@@ -258,13 +258,13 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca4.webp') }}" alt="cover"
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
                   class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                   <span class="text-white-100 text-title1 font-medium">5</span>
-                  <img src="{{ asset("images/point.webp") }}" alt="Point Icon" class="w-5 h-5 mr-1">
+                  <img src="{{ asset ('images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
             </a>
@@ -300,7 +300,7 @@
 
         <!-- Gambar animasi -->
         <div class="hidden md:flex w-3/12 items-center">
-          <img src="{{ asset('images/animasi.webp') }}" alt="">
+          <img src="{{ asset('images/animasi.webp') }}" alt="animasi">
         </div>
       </div>
     </div>
@@ -350,7 +350,7 @@
               </button>
             </div>
           </div>
-          <div class="md:flex justify-between py-4">
+          <div class="md:flex justify-between py-4 flex">
             <caption class="text-color-400">2 jam yang lalu</caption>
             <div class="flex items-center space-x-2">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 14 14">
@@ -368,7 +368,7 @@
               </a>
             </div>
           </div>
-          <div class="md:flex items-center group">
+          <div class="md:flex items-center group flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110"
               viewBox="0 0 16 16">
               <path fill="#84CCFA"
@@ -395,7 +395,7 @@
                     </div>
                     <div class="mt-4 max-h-80 overflow-y-auto space-y-3">
                       <!-- Item 1 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -435,7 +435,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -461,7 +461,7 @@
                       </div>
 
                       <!-- Item 2 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -501,7 +501,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -540,7 +540,7 @@
         </div>
       </div>
 
-      <div class="space-y-4 border-b-2 py-3">
+      <div class="space-y-4 border-b-2 py-3 p-3">
         <div class="flex items-center space-x-3">
           <a href=""
             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -578,7 +578,7 @@
               </button>
             </div>
           </div>
-          <div class="md:flex justify-between py-4">
+          <div class="md:flex justify-between py-4 flex">
             <caption class="text-color-400">2 jam yang lalu</caption>
             <div class="flex items-center space-x-2">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 14 14">
@@ -596,7 +596,7 @@
               </a>
             </div>
           </div>
-          <div class="md:flex items-center group">
+          <div class="md:flex items-center group flex">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-10 rotate-6 transtition-all group-hover:scale-110"
               viewBox="0 0 16 16">
               <path fill="#84CCFA"
@@ -623,7 +623,7 @@
                     </div>
                     <div class="mt-4 max-h-80 overflow-y-auto space-y-3">
                       <!-- Item 1 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -663,7 +663,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -689,7 +689,7 @@
                       </div>
 
                       <!-- Item 2 -->
-                      <div class="space-y-4 border-b-2 py-3">
+                      <div class="space-y-4 border-b-2 py-3 p-3">
                         <div class="flex items-center space-x-3">
                           <a href=""
                             class="flex items-center justify-center w-10 h-10 text-sm rounded-full bg-primary-500 text-gray-100 focus:outline-none focus:ring-2">
@@ -729,7 +729,7 @@
                               </button>
                             </div>
                           </div>
-                          <div class="md:flex justify-between py-4">
+                          <div class="md:flex justify-between py-4 flex">
                             <caption class="text-color-400">2 jam yang lalu</caption>
                             <div class="flex items-center space-x-2">
                               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
@@ -801,7 +801,7 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="{{ asset("images/literasimembaca1.webp") }}" alt=""
+              <img src="{{ asset("images/literasimembaca2.webp") }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
@@ -818,7 +818,7 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="{{ asset("images/literasimembaca1.webp") }}" alt=""
+              <img src="{{ asset("images/literasimembaca3.webp") }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
@@ -835,7 +835,7 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="{{ asset("images/literasimembaca1.webp") }}" alt=""
+              <img src="{{ asset("images/cover-geochemical.jpg") }}" alt="cover"
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
@@ -852,7 +852,7 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="{{ asset("images/literasimembaca1.webp") }}" alt=""
+              <img src="{{ asset("images/literasimembaca4.webp") }}" alt="cover"
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
