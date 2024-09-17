@@ -98,7 +98,9 @@
       </div>
       <div class="relative w-full mx-auto bg-white">
         <title1 id="textContent" class="text-black-400 transition-all duration-500 ease-in-out overflow-hidden">
-          <span class="block">{{ $book->description }}</span>
+          <div>
+            {!! $book->description !!}
+          </div>          
           <span id="moreText" class="hidden transition-opacity duration-500 ease-in-out opacity-0">
             Buku ini juga menekankan pentingnya peran keluarga dan lingkungan dalam membudayakan membaca. Dengan panduan
             ini, membaca menjadi bagian tak terpisahkan dari kehidupan sehari-hari, membawa dampak positif yang
