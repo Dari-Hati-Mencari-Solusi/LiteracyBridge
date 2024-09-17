@@ -1,9 +1,9 @@
-<nav class="sticky top-0 z-20 bg-white-100 border-gray-200 md:px-[160px] px-4">
+<nav class="sticky top-0 z-20 bg-white-100 border-gray-200 px-4">
   <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 md:py-[22px]">
     <!-- Bagian Kiri: Logo dan Navigasi -->
     <div class="flex items-center space-x-4">
       <a href="{{ route("home") }}" class="flex items-center">
-        <img src="{{ asset('images/logo.webp') }}" class="w-[56px]" alt="Flowbite Logo" />
+        <img src="{{ asset('images/logo.png') }}" class="w-[56px]" alt="Flowbite Logo" />
       </a>
       <!-- Navigasi Desktop -->
       <ul class="hidden md:flex font-medium space-x-8 rtl:space-x-reverse">
@@ -22,7 +22,7 @@
       <div class="relative max-w-md hidden md:block">
         <form action="{{ route("books.search") }}" method="GET" class="relative w-full">
           @csrf
-          <input 
+          <input
             name="s"
             type="search"
             class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent outline-none transition-all duration-500 focus:w-80 focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4" />
@@ -53,15 +53,17 @@
           </ul>
         </div>
       @else
-        <a href="{{ route("login") }}"
-        class="custom-button hidden md:flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA]"
-        style="color:white !important">Masuk</a>    
+        <a 
+          href="{{ route("login") }}"
+          class="btn-blue !duration-300 custom-button hidden md:flex text-center rounded-full px-[22px] py-2 text-lg font-semibold leading-6">
+          Masuk
+        </a>    
       @endauth
     </div>
 
     <!-- Tombol Menu Mobile -->
     <button id="menu-toggle" type="button"
-      class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-neutral-00 text-gray-400 hover:bg-[#39ADF8] focus:ring-white"
+      class="ml-auto inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-400 hover:bg-primary-100"
       aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -72,7 +74,7 @@
   </div>
 
   <!-- Navigasi Mobile -->
-  <div id="navbar-default" class="hidden md:hidden w-full py-4">
+  <div id="navbar-default" class="hidden md:hidden w-full py-4 shadow-sm">
     <ul class="font-medium flex flex-col space-y-2 rounded-lg">
       <li><a href="/book" class="block py-2 px-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white"
           aria-current="page">Buku</a></li>
@@ -82,7 +84,7 @@
           aria-current="page">Peringkat</a></li>
     </ul>
     <!-- Form Pencarian untuk Mobile -->
-    <div class="relative flex-grow max-w-md mt-4 md:hidden">
+    <div class="relative flex-grow mt-4 md:hidden">
       <form action="" class="relative w-full">
         <input type="search"
           class="peer cursor-pointer relative z-10 h-12 w-full rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#39ADF8] focus:pl-16 focus:pr-4 transition-all duration-500" />
@@ -95,12 +97,13 @@
     </div>
     <!-- Tombol Masuk untuk Mobile -->
     @guest
-      <a 
-        href="{{ route('login') }}"
-        class="custom-button flex justify-center rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] px-[22px] py-2 text-lg font-semibold leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] mt-4"
-        style="color:white !important">
-        Masuk
-      </a>      
+      <div class="w-full">
+        <a 
+          href="{{ route('login') }}"
+          class="btn-blue inline-block text-center rounded-full w-full px-[22px] py-2 text-lg font-semibold leading-6 mt-4">
+          Masuk
+        </a>      
+      </div>
     @endguest
   </div>
 </nav>

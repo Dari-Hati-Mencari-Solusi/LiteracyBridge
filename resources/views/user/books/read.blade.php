@@ -35,7 +35,7 @@
 
       <div class="space-y-3 md:pt-4 flex flex-col items-center">
         <div class="md:flex md:gap-3 flex-col md:flex-row w-full md:w-auto gap-4 px-2">
-          <button class="w-full md:w-auto rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] flex justify-center items-center gap-2 px-3 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-gradient-to-l text-white-100 hover:from-[#39ADF8] hover:to-[#84CCFA] mb-4 md:mb-0">
+          <button class="btn-blue w-full md:w-auto rounded-full flex justify-center items-center gap-2 px-3 py-2 text-base md:text-lg font-medium leading-6 text-white shadow-sm mb-4 md:mb-0">
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-7 md:h-7" viewBox="0 0 512 512">
               <path fill="#ffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 48H160a48 48 0 0 0-48 48v368l144-128l144 128V96a48 48 0 0 0-48-48"/>
             </svg></a>
@@ -51,32 +51,47 @@
           </button>
         </div>
 
-
       </div>
     </div>
   </div>
 
     <div class="container mx-auto text-center py-6">
-        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-            <h2 class="text-4xl font-bold">Mulai Membaca</h2>
+        <div class="bg-primary-100/30 p-4 rounded-lg shadow-md">
+            <h2 class="text-slate-700 text-4xl font-bold">Mulai Membaca</h2>
         </div>
-    </div>
-
-    <div class="flex justify-center space-x-4 my-6 p-4">
-        <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition" id="prev-page"
-            onclick="PdfViewer.showPrevPage()">Prev</button>
-        <button class="bg-blue-300 text-white py-2 px-4 rounded hover:bg-blue-400 transition" id="next-page"
-            onclick="PdfViewer.showNextPage()">Next</button>
     </div>
 
     <div class="flex justify-center">
         <canvas id="pdfArea" class="border pdfArea border-gray-300 w-full max-w-4xl"></canvas>
     </div>
-    <div class="flex justify-center my-6">
-      <button id="finish-reading-button" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition" style="display: none;" data-user-id="{{ auth()->user()->id }}">
-          Selesai Membaca
+
+    
+    <div class="flex justify-center space-x-4 my-6 p-4">
+      <button class="hidden btn-blue py-3 px-5 rounded-lg space-x-2" id="prev-page">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 inline-block" viewBox="0 0 32 32">
+          <path fill="currentColor" d="m16 8l1.43 1.393L11.85 15H24v2H11.85l5.58 5.573L16 24l-8-8z" />
+          <path fill="currentColor" d="M16 30a14 14 0 1 1 14-14a14.016 14.016 0 0 1-14 14m0-26a12 12 0 1 0 12 12A12.014 12.014 0 0 0 16 4" />
+        </svg>
+        <span class="inline-block text-xl">Sebelumnya</span>
       </button>
-  </div>
+      <button class="btn-blue py-3 px-5 rounded-lg flex items-center space-x-2" id="next-page">
+        <span class="text-xl">Selanjutnya</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7" viewBox="0 0 32 32">
+          <path fill="currentColor" d="m16 8l-1.43 1.393L20.15 15H8v2h12.15l-5.58 5.573L16 24l8-8z" />
+          <path fill="currentColor" d="M16 30a14 14 0 1 1 14-14a14.016 14.016 0 0 1-14 14m0-26a12 12 0 1 0 12 12A12.014 12.014 0 0 0 16 4" />
+        </svg>
+      </button>
+
+      <button id="finish-reading-button" class="text-xl btn-green py-3 px-5 rounded-lg space-x-2" style="display: none;" data-user-id="{{ auth()->user()->id }}">
+          <span class="inline-block">Selesai Membaca</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 inline-block" viewBox="0 0 16 16">
+            <path fill="currentColor" fill-rule="evenodd" d="M3 13.5a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h9.25a.75.75 0 0 0 0-1.5H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9.75a.75.75 0 0 0-1.5 0V13a.5.5 0 0 1-.5.5zm12.78-8.82a.75.75 0 0 0-1.06-1.06L9.162 9.177L7.289 7.241a.75.75 0 1 0-1.078 1.043l2.403 2.484a.75.75 0 0 0 1.07.01z" clip-rule="evenodd" />
+          </svg>
+      </button>
+    </div>
+
+    <div class="flex justify-center my-6">
+    </div>
 
 </section>
 @endsection

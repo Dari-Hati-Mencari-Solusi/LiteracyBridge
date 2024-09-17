@@ -15,7 +15,7 @@
         </div>
         <div class="py-5 px-5">
           <h5 class="text-black-400 font-bold">{{ $user->name }}</h5>
-          <h6 class="text-neutral-700">{{ $user->username }}</h6>          
+          <h6 class="text-neutral-700">{{ $user->username }}</h6>
           <h6 class="text-black-400">Bergabung {{ \Carbon\Carbon::parse("$user->created_at")->translatedFormat('F Y') }}</h6>
           <h6 class="text-[#129DF7] font-bold">Bookworms</h6>
           <img src="{{ asset('images/rangking.webp') }}" alt="ranking profile" class="w-[35px] h-[45px]">
@@ -67,7 +67,7 @@
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca1.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>
@@ -75,22 +75,22 @@
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca2.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca3.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca4.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-sangkuriang.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>
@@ -105,27 +105,27 @@
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-geochemical.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-literasi-sebagai-praktik-sosial.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-sejenak-hening.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/cover-merengkuh-kebahagiaan.jpg') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
             </div>
           </a>
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <img src="{{ asset ('./images/literasimembaca3.webp') }}" alt="" class="w-[92px] rounded-lg h-[131px] transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute top-0 right-0 flex items-center justify-center w-14 h-5 p-2 bg-blue-500 text-white-100 text-[10px] rounded-tr-xl rounded-bl-xl space-x-1">
                 <span>Populer</span>
               </div>
@@ -136,14 +136,14 @@
 
       <div class="border-2 border-primary-200 rounded-xl p-5 space-y-2">
         <div class="flex flex-wrap overflow-x-auto gap-x-6 gap-y-3">
-          <a href="#"><img src="{{ asset('images/rangking.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
-          <a href="#"><img src="{{ asset('images/ranklock.webp') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/rankunlock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
+          <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
         </div>
       </div>
     </div>

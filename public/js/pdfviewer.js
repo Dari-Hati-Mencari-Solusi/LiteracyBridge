@@ -1,11 +1,13 @@
 class PdfViewer {
-  constructor(url, canvasId, finishButtonId) {
+  constructor(url, canvasId, finishButtonId, nextPage, prevPage) {
     this.url = url;
     this.canvasId = canvasId;
     this.finishButtonId = finishButtonId;
     this.pdfDoc = null;
     this.pageNum = 1;
     this.numPages = 0;
+    this.nextPage = nextPage;
+    this.prevPage = prevPage;
 
     this.init();
   }
@@ -22,8 +24,9 @@ class PdfViewer {
       this.pdfDoc = res;
       this.numPages = res.numPages;
       this.renderPage(pageNum);
-      this.checkIfLastPage();
+      this.checkIfLastPage();      
     });
+
   }
 
   renderPage(num) {
@@ -47,21 +50,43 @@ class PdfViewer {
     });
   }
 
-  showPrevPage() {
-    if (this.pageNum <= 1) {
+  showPrevPage() {        
+    if (this.pageNum <= 1) {   
       return;
-    }
+    } 
+
     this.pageNum--;
     this.renderPage(this.pageNum);
+
+    if (this.pageNum <= 1) {      
+      if (!$(this.prevPage).hasClass("hidden")) {
+        $(this.prevPage).addClass("hidden");      
+      }          
+    } else if (this.pageNum <= this.numPages) {
+      if ($(this.nextPage).hasClass("hidden")) {
+        $(this.nextPage).removeClass("hidden");      
+      }          
+    }         
   }
 
   showNextPage() {
-    if (this.pageNum >= this.numPages) {
+    if (this.pageNum >= this.numPages) {      
       return;
     }
+
+    if ($(this.prevPage).hasClass("hidden")) {
+      $(this.prevPage).removeClass("hidden");      
+    }    
+
     this.pageNum++;
     this.renderPage(this.pageNum);
     this.checkIfLastPage();
+
+    if (this.pageNum >= this.numPages) {
+      if (!$(this.nextPage).hasClass("hidden")) {
+        $(this.nextPage).addClass("hidden");
+      }    
+    }
   }
 
   checkIfLastPage() {
@@ -107,7 +132,9 @@ const fileName = $("input[name='inpFileName']").val();
 const pdfViewer = new PdfViewer(
   `/books/${fileName}`,
   "#pdfArea",
-  "#finish-reading-button"
+  "#finish-reading-button",
+  "#next-page",
+  "#prev-page"
 );
 
 document.getElementById("prev-page").addEventListener("click", () => {

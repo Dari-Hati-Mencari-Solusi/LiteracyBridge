@@ -35,7 +35,7 @@
                   class="w-3/5 h-12 pl-4 bg-white-100 border-neutral-400 focus:outline-none focus:border-y-0 focus:ring-0 border-y-0 border-l border-r font-normal"
                   placeholder="Cari buku berdasarkan..">
                 <button
-                  class="w-1/5 h-12 flex items-center justify-center ml-4 rounded-full bg-gradient-to-r from-[#39ADF8] to-[#84CCFA] text-white font-medium transition-all duration-300 ease-in-out shadow-sm hover:bg-gradient-to-l hover:from-[#39ADF8] hover:to-[#84CCFA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#39ADF8]"
+                  class="w-1/5 h-12 flex items-center justify-center ml-4 rounded-full btn-blue"
                   style="color: white !important">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-0 md:mr-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -89,13 +89,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{  asset ('./images/literasimembaca1.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -106,13 +106,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca3.webp')}}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp')}}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -123,13 +123,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca4.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp')}}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -140,13 +140,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
-                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
+              <img src="{{ asset ('images/cover-sangkuriang.jpg') }}" alt=""
+                class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px] ">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp')}}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -157,13 +157,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-geochemical.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp')}}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -192,7 +192,7 @@
                 <div
                   class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                   <span class="text-white-100 text-title1 font-medium">5</span>
-                  <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                  <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
                 </div>
               </div>
             </a>
@@ -228,7 +228,7 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca2.webp') }}" alt=""
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
@@ -269,7 +269,7 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca3.webp') }}" alt=""
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
@@ -310,7 +310,7 @@
           <div class="flex items-start mt-2 mb-4">
             <a href="#" class="block overflow-hidden rounded-xl mr-4">
               <div class="relative overflow-hidden rounded-xl">
-                <img src="{{ asset('images/literasimembaca1.webp') }}" alt=""
+                <img src="{{ asset('images/literasimembaca4.webp') }}" alt=""
                   class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <!-- Badge -->
                 <div
@@ -382,13 +382,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca1.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -399,13 +399,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca3.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -416,13 +416,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca4.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -433,13 +433,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca2.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -450,13 +450,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-sejenak-hening.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -478,13 +478,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-geochemical.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -495,13 +495,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-literasi-sebagai-praktik-sosial.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -512,13 +512,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/literasimembaca2.webp') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -529,13 +529,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-pedoman.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
@@ -546,13 +546,13 @@
         <div class="relative flex flex-col items-center">
           <a href="#" class="block overflow-hidden rounded-xl max-w-full">
             <div class="relative overflow-hidden rounded-xl">
-              <img src="./images/literasimembaca1.webp" alt=""
+              <img src="{{ asset ('./images/cover-merengkuh-kebahagiaan.jpg') }}" alt=""
                 class="rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110 w-[200px]">
               <!-- Badge -->
               <div
                 class="absolute top-0 right-0 flex items-center justify-center w-12 h-8 bg-blue-500 text-white text-xs rounded-tr-xl rounded-bl-xl space-x-1">
                 <span class="text-white-100 text-title1 font-medium">5</span>
-                <img src="./images/point.webp" alt="Point Icon" class="w-5 h-5 mr-1">
+                <img src="{{ asset ('./images/point.webp') }}" alt="Point Icon" class="w-5 h-5 mr-1">
               </div>
             </div>
             <h6 class="font-normal pt-3">Judul Buku</h6>
