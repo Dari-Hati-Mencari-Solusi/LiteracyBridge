@@ -75,4 +75,18 @@
   .btn-blue-outline:hover {
     background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
   }
+
+  .btn-red {
+    @apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      to right,
+      #ff2929 0%,
+      #f04c4c 51%,
+      #ff2929 100%
+    );
+  }
+  .btn-red:hover {
+    background-position: right center;
+  }
 }
