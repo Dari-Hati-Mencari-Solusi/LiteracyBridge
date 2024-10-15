@@ -19,9 +19,9 @@
 </head>
 
 <body class="antialiased font-poppins">
-  <section class="flex flex-col md:flex-row w-full h-screen min-h-[650px]">
+  <section class="flex flex-col md:flex-row w-full">
     {{-- row 1 --}}
-    <div class="w-full md:w-5/12 bg-white">
+    <div class="w-full md:w-5/12 bg-white  h-screen min-h-[650px]">
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm flex items-center">
           <img src="{{ asset ('images/logo.webp')  }}" alt="">
@@ -89,7 +89,7 @@
           <form class="space-y-6" action="/login" method="POST">
             @csrf
             <div>
-              <label for="email" class="block text-sm font-normal leading-6 text-black-300">Email</label>
+              <label for="email" class="block text-sm font-semibold leading-6 text-black-500">Email</label>
               <div class="mt-2">
                 <input id="email" name="email" type="email" value="{{ old('email') }}" required
                   class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-[#EE9F9F] sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
@@ -99,7 +99,7 @@
 
             <div>
               <div class="flex items-center justify-between">
-                <label for="password" class="block text-sm font-normal leading-6 text-black-300">Kata Sandi</label>
+                <label for="password" class="block text-sm font-semibold leading-6 text-black-500">Kata Sandi</label>
               </div>
               <div class="relative">
                 <input id="password" name="password" type="password" autocomplete="new-password" required
@@ -143,8 +143,8 @@
     </div>
 
     {{-- row 1 --}}
-    <div class="h-full md:w-8/12 bg-black hidden justify-center md:flex items-center p-6">
-      <div class="bg-center relative h-full w-full pb-6">
+    <div class=" md:w-8/12 bg-black hidden justify-center md:flex items-center p-6">
+      <div class="bg-center relative h-full w-full">
         <img src="{{ asset ('images/image.png') }}" alt="background image" class="w-full">
         {{-- <img src="./images/char1.webp" alt="character"
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> --}}
