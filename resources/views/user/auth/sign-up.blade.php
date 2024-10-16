@@ -65,7 +65,7 @@
               <label for="text" class="block text-sm font-semibold leading-6 text-black-5600">Nama Lengkap</label>
               <div class="mt-2">
                 <input id="text" name="fullname" type="text" value="{{ old('fullname') }}" autocomplete="off"
-                  class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+                  class="block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-[#EE9F9F] sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
                   placeholder="Jhon Doe">
               </div>
             </div>
@@ -84,20 +84,26 @@
               <label for="email" class="block text-sm font-semibold leading-6 text-black-5600">Email</label>
               <div class="mt-2">
                 <input id="email" name="email" type="email" value="{{ old('email') }}" required
-                  class="@error('email') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+                  class="@error('email') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-[#EE9F9F] sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
                   placeholder="Contoh@gmail.com">
               </div>
             </div>
 
             <div>
               <div class="flex items-center justify-between">
-                <label for="password" class="block text-sm font-semibold leading-6 text-black-5600">Kata Sandi</label>
+                <label for="password" class="block text-sm font-semibold leading-6 text-black-500">Kata Sandi</label>
               </div>
-              <div>
-                <input id="password" name="password" type="password" required
-                  class="@error('password') is-invalid @else is-valid @enderror block w-full rounded-md border-0 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3 font-normal placeholder:text-md transition-all duration-300 ease-in-out"
+              <div class="relative">
+                <input id="password" name="password" type="password" autocomplete="new-password" required
+                  class="block w-full rounded-md border-0 py-2.5 pr-10 text-gray-900 shadow-sm ring-1 ring-inset border-neutral-600 ring-neutral-600 placeholder:text-neutral-400 focus:ring-1 focus:ring-inset focus:ring-[#EE9F9F] sm:text-sm sm:leading-6 px-3 transition-all duration-300 ease-in-out"
                   placeholder="Masukan sandi anda">
-              </div>
+
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path d="M15.0004 3.75C21.7405 3.75 27.348 8.5997 28.5236 15C27.348 21.4002 21.7405 26.25 15.0004 26.25C8.26015 26.25 2.65269 21.4002 1.47705 15C2.65269 8.5997 8.26015 3.75 15.0004 3.75ZM15.0004 23.75C20.2949 23.75 24.8254 20.065 25.9721 15C24.8254 9.93504 20.2949 6.25 15.0004 6.25C9.70575 6.25 5.17528 9.93504 4.02848 15C5.17528 20.065 9.70575 23.75 15.0004 23.75ZM15.0004 20.625C11.8937 20.625 9.37533 18.1066 9.37533 15C9.37533 11.8934 11.8937 9.375 15.0004 9.375C18.1069 9.375 20.6254 11.8934 20.6254 15C20.6254 18.1066 18.1069 20.625 15.0004 20.625ZM15.0004 18.125C16.7263 18.125 18.1254 16.7259 18.1254 15C18.1254 13.2741 16.7263 11.875 15.0004 11.875C13.2745 11.875 11.8753 13.2741 11.8753 15C11.8753 16.7259 13.2745 18.125 15.0004 18.125Z" fill="#878787"/>
+                    </svg>
+                </span>
+            </div>
             </div>
 
             {{-- <div>
@@ -139,7 +145,7 @@
     {{-- row 2 --}}
     <div class="h-full md:w-8/12 bg-black hidden justify-center md:flex items-center p-6">
       <div class="bg-center relative h-full w-full ">
-        <img src="{{ asset ('images/image.png') }}" alt="background image" class="w-full">
+        <img src="{{ asset ('images/image.png') }}" alt="background image" class="w-full h-[976px]">
         {{-- <img src="./images/char1.webp" alt="character"
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"> --}}
           {{-- <iframe class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[52rem] h-[44rem]" src="https://lottie.host/embed/885c852e-a278-439d-8a75-7a842bb3b987/udR1icHknq.json"></iframe> --}}
