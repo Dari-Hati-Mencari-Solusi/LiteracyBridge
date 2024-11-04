@@ -20,8 +20,7 @@
     <div class="flex items-center space-x-4">
       <!-- Form Pencarian untuk Desktop -->
       <div class="relative max-w-md hidden md:block">
-        <form action="{{ route("books.search") }}" method="GET" class="relative w-full">
-          @csrf
+        <form action="{{ route("books.search") }}" method="GET" class="relative w-full">          
           <input
             name="s"
             type="search"
