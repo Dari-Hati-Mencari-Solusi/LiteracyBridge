@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\DB;
 
 class Book extends Model
@@ -34,6 +35,10 @@ class Book extends Model
 
     public static function getRecommendedBooksByUserPreference($byName = "genre", $user = null){
         // return DB::table("user_preference_details")->where("user");
+    }
+
+    public function bookmarks() : HasMany {
+        return $this->hasMany(Bookmark::class, "book_id");
     }
 
     public function getRouteKeyName()

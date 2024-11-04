@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
             BadgeSeeder::class,
             UserBadgeSeeder::class,
             UserPreferenceSeeder::class,
-            UserPreferenceTypeSeeder::class        
+            UserPreferenceTypeSeeder::class,
+            BookmarkSeeder::class      
         ]);
     }
 }
