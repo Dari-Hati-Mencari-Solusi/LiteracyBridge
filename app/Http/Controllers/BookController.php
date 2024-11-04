@@ -21,14 +21,20 @@ class BookController extends Controller
     return view('user.books.read', ['book' => $book]);
   }
 
+
   public function search(Request $request){
 
-    $query = $request->input('s');
+    $keywords = $request->input('s');
     
-    $books = Book::where('title', 'LIKE', "%{$query}%")
-              ->orWhere('author', 'LIKE', "%{$query}%")                 
+    $books = Book::where('title', 'LIKE', "%{$keywords}%")
+              ->orWhere('author', 'LIKE', "%{$keywords}%")                 
               ->get();
 
-    return view("user.books.searchbook", compact("books", "query"));
+    $mostCollectedBooks = Book::withCount("bookmarks")
+      ->orderBy("bookmarks_count", "desc")
+      ->limit(4)
+      ->get();        
+
+    return view("user.books.searchbook", compact("books","keywords", "mostCollectedBooks"));
   }
 }

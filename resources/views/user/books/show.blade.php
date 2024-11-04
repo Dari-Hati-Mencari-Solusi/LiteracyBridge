@@ -13,8 +13,8 @@
             <path fill="#666666" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7z" />
           </svg>
           <div class="text-center md:text-left pt-2">
-            <a href="#" class="text-black-300 font-light">/Literasi</a>
-            <a href="#" class="text-black-300 font-medium">/{{ $book->title }}</a>
+            <a href="#" class="text-black-300 font-light">/ Literasi</a>
+            <a href="#" class="text-black-300 font-medium">/ {{ $book->title }}</a>
           </div>
         </div>
       </div>
@@ -45,11 +45,11 @@
                 </div>
                 <div class="flex items-center space-x-1">
                   <img src="{{ asset('images/point-fix.webp') }}" alt="gambar point" class="w-7 h-7">
-                  <span class="text-title1 text-black-900 font-medium px-3">5 Point</span>
+                  <span class="text-title1 text-black-900 font-medium px-3">{{ $book->point != 0 ? intVal($book->point) : "0" }} Poin</span>
                 </div>
               </div>
 
-              <p class="text-black-400 pt-2">Author: <span class="text-primary-800">{{ $book->author }}</span></p>
+              <p class="text-black-400 pt-2">Penulis: <span class="text-primary-800">{{ $book->author }}</span></p>
             </div>
 
             <div class="space-y-3 md:pt-16">
