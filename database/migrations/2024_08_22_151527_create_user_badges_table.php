@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('user_badges', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('badge_id');
+            $table->timestamp("earned_at")->useCurrent();
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('badge_id')->references('id')->on('badges')->onDelete('cascade');
