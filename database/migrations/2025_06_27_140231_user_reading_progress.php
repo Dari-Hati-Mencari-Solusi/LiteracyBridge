@@ -11,15 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bookmarks', function (Blueprint $table) {
+        Schema::create('user_reading_progress', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("book_id");
-            $table->integer("page_number")->nullable();
-            $table->string("note")->nullable();
+            $table->integer("current_page")->default(1);
+            $table->integer("total_pages")->nullable();
+            $table->string("status",  ["reading", "completed", "paused"])->default("reading"); 
+            $table->dateTime("last_read_at")->nullable();
+            $table->timestamp("start_date");
+            $table->timestamp("finish_date")->nullable();
+            $table->timestamps();
+
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
             $table->foreign("book_id")->references("id")->on("books")->onDelete("cascade");
-            $table->timestamps();
         });
     }
 
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bookmarks');
+        //
     }
 };

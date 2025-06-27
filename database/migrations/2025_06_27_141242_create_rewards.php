@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('badges', function (Blueprint $table) {
+        Schema::create('rewards', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->text("description")->nullable();
-            $table->integer("rangking");
-            $table->string("icon_name");
-            $table->text("description")->nullable();
+            $table->string('name');
+            $table->text('description');
+            $table->integer('points_cost');
+            $table->enum('type', ['badge', 'voucher', 'digital_item']);
+            $table->integer('stock')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('badges');
+        Schema::dropIfExists('rewards');
     }
 };

@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bookmarks', function (Blueprint $table) {
-            $table->id();
+        Schema::create('user_book_loves', function (Blueprint $table) {
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("book_id");
-            $table->integer("page_number")->nullable();
-            $table->string("note")->nullable();
+
             $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
             $table->foreign("book_id")->references("id")->on("books")->onDelete("cascade");
-            $table->timestamps();
+            $table->timestamps();      
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bookmarks');
+        Schema::dropIfExists('user_book_loves');
     }
 };

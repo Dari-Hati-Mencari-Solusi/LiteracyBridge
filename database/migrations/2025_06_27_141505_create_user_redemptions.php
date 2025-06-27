@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_badges', function (Blueprint $table) {
+        Schema::create('user_redemptions', function (Blueprint $table) {
+            $table->id('redemption_id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('badge_id');
-            $table->timestamp("earned_at")->useCurrent();
+            $table->unsignedBigInteger('reward_id');
+            $table->timestamp('redemption_date');
+            $table->integer('points_spent');
+            $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('badge_id')->references('id')->on('badges')->onDelete('cascade');
-
-            $table->timestamps();
+            $table->foreign('reward_id')->references('id')->on('rewards')->onDelete('cascade');
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_badges');
+        Schema::dropIfExists('user_redemptions');
     }
 };
