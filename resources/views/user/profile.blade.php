@@ -6,24 +6,26 @@
 @php
   \Carbon\Carbon::setLocale('id');
 @endphp
-<section class="container py-16">
-  <div class="md:flex gap-3 md:px-[160px] px-4 justify-between">
-    <div class="w-full md:w-6/12">
-      <div class="flex flex-col md:flex-row">
-        <div class="bg-[#D9D9D9] p-5 md:p-7 rounded-3xl flex justify-center md:block">
+<section class="my-container pt-16">
+  <div class="md:grid grid-cols-12 gap-6 justify-between">
+
+    <div class="w-full col-span-5 space-y-6">
+      <div class="flex flex-col md:flex-row bg-neutral-100 p-4 rounded-xl">
+        <div class="p-5 md:p-7 rounded-3xl flex justify-center md:block">
           <img src="{{ asset('images/profile.webp') }}" alt="foto profile" class="w-[110px] h-[130px]">
         </div>
         <div class="py-5 px-5">
           <h5 class="text-black-400 font-bold">{{ $user->name }}</h5>
-          <h6 class="text-neutral-700">{{ $user->username }}</h6>
+          {{-- <h6 class="text-neutral-700">{{ $user->username }}</h6> --}}
           <h6 class="text-black-400">Bergabung {{ \Carbon\Carbon::parse("$user->created_at")->translatedFormat('F Y') }}</h6>
           <h6 class="text-[#129DF7] font-bold">Bookworms</h6>
           <img src="{{ asset('images/rangking.webp') }}" alt="ranking profile" class="w-[35px] h-[45px]">
         </div>
       </div>
-      <div class="py-8 md:py-14 space-y-4">
-        <div class="border-t-2 border-neutral-400 w-full md:w-[422px]">
-          <h4 class="text-black-400 pt-3 text-lg md:text-[28px] font-bold">Statistik</h4>
+
+      <div class="space-y-4 bg-neutral-100 p-4 rounded-xl">
+        <div class="= w-full md:w-[422px]">
+          <h4 class="text-black-400 text-lg md:text-[28px] font-bold">Statistik</h4>
         </div>
         <div class="flex flex-wrap gap-4">
           <div class="border-[1.5px] border-primary-200 rounded-xl p-4 flex space-x-3 w-full md:w-[48%]">
@@ -34,7 +36,7 @@
             </div>
           </div>
           <div class="border-[1.5px] border-primary-200 rounded-xl p-4 flex space-x-3 w-full md:w-[48%]">
-            <img src="{{ asset('images/point-fix.webp') }}" alt="logo ranking" class="w-[35px] h-[45px]">
+            <img src="{{ asset('images/point-fix.webp') }}" alt="logo ranking" class="w-[45px] h-[45px]">
             <div>
               <h5 class="text-black-400 font-bold">{{ $user->point }}</h5>
               <h6 class="text-neutral-700">Total point</h6>
@@ -50,20 +52,14 @@
               <h6 class="text-neutral-700">Pencapaian</h6>
             </div>
           </div>
-          <div class="border-[1.5px] border-primary-200 rounded-xl p-4 flex space-x-3 w-full md:w-[48%]">
-            <img src="{{ asset('images/energi.webp') }}" alt="logo ranking" class="w-[35px] h-[45px]">
-            <div>
-              <h5 class="text-black-400 font-bold">43</h5>
-              <h6 class="text-neutral-700">Total XP</h6>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
 
-    <div class="w-full md:w-7/12 space-y-4 mt-8 md:mt-0">
-      <div class="border-2 border-primary-200 rounded-xl p-5 space-y-2">
-        <h5 class="text-black-400 font-bold">Buku Favorit</h5>
+    <div class="w-full col-span-7 space-y-6 mt-8 md:mt-0">
+      <div class="bg-neutral-100 rounded-xl p-5 space-y-2">
+        <h5 class="text-black-400 text-lg md:text-[28px] font-bold mb-4">Buku Favorit</h5>
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
@@ -100,8 +96,8 @@
       </div>
 
       <!-- Duplikat Buku Favorit lain -->
-      <div class="border-2 border-primary-200 rounded-xl p-5 space-y-2">
-        <h5 class="text-black-400 font-bold">Terakhir Dibaca</h5>
+      <div class="bg-neutral-100 rounded-xl p-5 space-y-2">
+        <h5 class="text-black-400 text-lg md:text-[28px] font-bold mb-4">Terakhir Dibaca</h5>
         <div class="flex flex-wrap overflow-x-auto gap-x-2 gap-y-4">
           <a href="#" class="block overflow-hidden rounded-xl">
             <div class="relative overflow-hidden rounded-xl">
@@ -134,7 +130,8 @@
         </div>
       </div>
 
-      <div class="border-2 border-primary-200 rounded-xl p-5 space-y-2">
+      <div class="bg-neutral-100 rounded-xl p-5 space-y-2">
+		  <h5 class="text-black-400 text-lg md:text-[28px] font-bold mb-4">Badges</h5>
         <div class="flex flex-wrap overflow-x-auto gap-x-6 gap-y-3">
           <a href="#"><img src="{{ asset('images/rankunlock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>
           <a href="#"><img src="{{ asset('images/ranklock.png') }}" alt="gambar ranking" class="w-[37px] rounded-lg h-[49px]"></a>

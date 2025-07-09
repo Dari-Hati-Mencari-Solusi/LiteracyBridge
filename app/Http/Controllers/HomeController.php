@@ -22,6 +22,8 @@ class HomeController extends Controller
 
       $videos = Video::getVideos(4);
 
+	  $user = Auth::user();
+
       if (Auth::check()) {                
 
         $literationBooks = Book::getSortedBooks(
@@ -31,7 +33,7 @@ class HomeController extends Controller
 
         return view("user.landing",
           compact(
-            "favoriteBooks", "literationBooks", "latestBooks", "videos"
+            "favoriteBooks", "literationBooks", "latestBooks", "videos", "user" 
           )
         );
       }        
@@ -39,7 +41,7 @@ class HomeController extends Controller
       return view(
         "user.welcome", 
         compact(
-          "favoriteBooks", "latestBooks", "videos"
+          "favoriteBooks", "latestBooks", "videos", 
         )
       );
     }    

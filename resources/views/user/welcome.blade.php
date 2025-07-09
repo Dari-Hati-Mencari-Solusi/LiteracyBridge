@@ -24,10 +24,10 @@
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <button id="btnGo"
+                    <a href="{{ route('login') }}"
                         class="btn-blue rounded-md px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                         🚀 Mulai Membaca
-                    </button>
+                    </a>
                     <a href="{{ route('login') }}"
                         class="btn-blue-outline rounded-md px-8 py-4 text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                         👤 Masuk Akun
@@ -68,19 +68,12 @@
             </div>
             <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
                 @foreach ($favoriteBooks as $book)
-                    <li class="flex flex-col items-center md:items-start">
-                        <a href="{{ 'books/' . $book->slug }}" class="block overflow-hidden rounded-xl max-w-full">
-                            <div class="h-64 relative overflow-hidden rounded-xl sm:h-[366px]">
-                                <img src="{{ asset("images/$book->cover_name") }}" alt="Cover {{ $book->title }}"
-                                    class="h-full w-full object-cover object-top rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                            </div>
-                            <div class="flex flex-col justify-between">
-                                <h6 class="mb-2 text-sm font-medium pt-3 line-clamp-2 hover:underline sm:text-lg">
-                                    {{ $book->title }}</h6>
-                                <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
-                            </div>
-                        </a>
-                    </li>
+                     <x-book-card 
+                        title="{{ $book->title }}" 
+                        authors="{{ $book->author }}"
+                        image="{{ asset('images/' . $book->cover_name) }}" 
+                        category="Literasi"
+                        link="{{ route('books.show', $book->slug) }}" />
                 @endforeach
             </ul>
         </div>
@@ -145,19 +138,12 @@
             </div>
             <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 py-5">
                 @foreach ($latestBooks as $book)
-                    <li class="flex flex-col items-center md:items-start">
-                        <a href="{{ 'books/' . $book->slug }}" class="block overflow-hidden rounded-xl max-w-full">
-                            <div class="h-64 relative overflow-hidden rounded-xl sm:h-[366px]">
-                                <img src="{{ asset("images/$book->cover_name") }}" alt="Cover {{ $book->title }}"
-                                    class="h-full w-[400px] object-cover object-top rounded-xl transform transition-transform duration-300 ease-in-out hover:scale-110">
-                            </div>
-                            <div class="flex flex-col justify-between">
-                                <h6 class="mb-2 text-sm font-medium pt-3 line-clamp-2 hover:underline sm:text-lg">
-                                    {{ $book->title }}</h6>
-                                <p class="text-xs font-light line-clamp-1 sm:text-sm">Penulis {{ $book->author }}</p>
-                            </div>
-                        </a>
-                    </li>
+                     <x-book-card 
+                        title="{{ $book->title }}" 
+                        authors="{{ $book->author }}"
+                        image="{{ asset('images/' . $book->cover_name) }}" 
+                        category="Literasi"
+                        link="{{ route('books.show', $book->slug) }}" />
                 @endforeach
             </ul>
         </div>

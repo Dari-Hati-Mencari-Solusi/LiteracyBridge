@@ -1,5 +1,5 @@
 <nav class="sticky top-0 z-20 bg-white-100 border-gray-200 ">
-  <div class="max-w-screen-xl flex items-center justify-between max-md:p-4 md:py-[22px] my-container">
+  <div class="max-w-full flex items-center justify-between max-md:p-4 md:py-[22px] my-container">
     <!-- Bagian Kiri: Logo dan Navigasi -->
     <div class="flex items-center">
       <a href="{{ route("home") }}" class="flex items-center ">

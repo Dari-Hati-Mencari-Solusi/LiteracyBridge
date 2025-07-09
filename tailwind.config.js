@@ -7,6 +7,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
     "./public/js/*.js"
   ],
+  safelist : [
+	'line-clamp-2'
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -102,7 +105,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    require('@tailwindcss/line-clamp')
   ],
 }
 

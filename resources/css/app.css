@@ -3,94 +3,110 @@
 @tailwind utilities;
 
 .custom-button {
-  color: white !important;
-  transition: 2s;
-  border: none;
+	color: white !important;
+	transition: 2s;
+	border: none;
 }
+
 .custom-button:hover {
-  background-position: bottom;
+	background-position: bottom;
 }
 
 @layer base {
-  body {
-    font-family: "Poppins", sans-serif;
-  }
+	body {
+		font-family: "Poppins", sans-serif;
+	}
 
-  .my-container {
-    @apply max-lg:px-4 mx-auto lg:w-[80%];
-  }
+	.my-container {
+		@apply max-lg:px-4 mx-auto lg:w-[80%];
+	}
 
-  .section-title {
-	@apply text-[24px] lg:text-4xl font-bold mb-8 text-center md:text-start;
-  }
+	.section-title {
+		@apply text-[24px] lg:text-4xl font-bold mb-8 text-center md:text-start;
+	}
 
-  /* Untuk seluruh elemen scrollbar */
-  ::-webkit-scrollbar {
-    width: 12px; /* Lebar scrollbar */
-    height: 12px; /* Tinggi scrollbar untuk elemen yang horizontal */
-  }
+	/* Untuk seluruh elemen scrollbar */
+	::-webkit-scrollbar {
+		width: 12px;
+		/* Lebar scrollbar */
+		height: 12px;
+		/* Tinggi scrollbar untuk elemen yang horizontal */
+	}
 
-  /* Track scrollbar */
-  ::-webkit-scrollbar-track {
-    background: #d9d9d9; /* Warna background track */
-    border-radius: 10px; /* Sudut border untuk track */
-  }
+	/* Track scrollbar */
+	::-webkit-scrollbar-track {
+		background: #d9d9d9;
+		/* Warna background track */
+		border-radius: 10px;
+		/* Sudut border untuk track */
+	}
 
-  /* Handle scrollbar (yang bisa digeser) */
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary-500;
-    border-radius: 10px; /* Sudut border untuk handle */
-  }
+	/* Handle scrollbar (yang bisa digeser) */
+	::-webkit-scrollbar-thumb {
+		@apply bg-primary-500;
+		border-radius: 10px;
+		/* Sudut border untuk handle */
+	}
 
-  /* Hover pada handle scrollbar */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary-600;
-  }
+	/* Hover pada handle scrollbar */
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-primary-600;
+	}
 
-  @apply component {
-    .bg-thumb {
-      @apply bg-[#39ADF8];
-    }
-  }
+	@apply component {
+		.bg-thumb {
+			@apply bg-[#39ADF8];
+		}
+	}
 }
 
 @layer components {
-  .btn-blue {
-    @apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-  }
-  .btn-blue:hover {
-    background-position: right center;
-  }
-  
-  .btn-green {
-    @apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
-    background-size: 300% 100%;
-    background-image: linear-gradient(to right, #56ab2f 0%, #a8e063  51%, #56ab2f  100%);
-  }
-  .btn-green:hover {
-    background-position: right center;
-  }       
+	.btn-blue {
+		@apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
+		background-size: 300% 100%;
+		background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+	}
 
-  .btn-blue-outline {
-    @apply border-2 border-neutral-500 bg-white-100 text-primary-500 hover:text-white-100 hover:border-white-100 transition duration-500 shadow-sm;
-  }
-  .btn-blue-outline:hover {
-    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
-  }
+	.btn-blue:hover {
+		background-position: right center;
+	}
 
-  .btn-red {
-    @apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
-    background-size: 300% 100%;
-    background-image: linear-gradient(
-      to right,
-      #ff2929 0%,
-      #f04c4c 51%,
-      #ff2929 100%
-    );
-  }
-  .btn-red:hover {
-    background-position: right center;
-  }
+	.btn-green {
+		@apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
+		background-size: 300% 100%;
+		background-image: linear-gradient(to right, #56ab2f 0%, #a8e063 51%, #56ab2f 100%);
+	}
+
+	.btn-green:hover {
+		background-position: right center;
+	}
+
+	.btn-blue-outline {
+		@apply border-2 border-neutral-500 bg-white-100 text-primary-500 hover:text-white-100 hover:border-white-100 transition duration-500 shadow-sm;
+	}
+
+	.btn-blue-outline:hover {
+		background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+	}
+
+	.btn-red {
+		@apply text-white-100 transition-all ease-in-out duration-700 shadow-sm;
+		background-size: 300% 100%;
+		background-image: linear-gradient(to right,
+				#ff2929 0%,
+				#f04c4c 51%,
+				#ff2929 100%);
+	}
+
+	.btn-red:hover {
+		background-position: right center;
+	}
+}
+
+
+.line-clamp-2 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
 }
